@@ -7,6 +7,24 @@ public class Carro {
     private String ano;
     private String cor;
     private int quilometragem;
+    private int uniquqId;
+    private int preco;
+
+    public int getUniquqId() {
+        return uniquqId;
+    }
+
+    public void setUniquqId(int uniquqId) {
+        this.uniquqId = uniquqId;
+    }
+
+    public int getPreco() {
+        return preco;
+    }
+
+    public void setPreco(int preco) {
+        this.preco = preco;
+    }
 
     public String getMarca() {
         return marca;

@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70bcc7fd-059b-468c-8107-12bca76dff8c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/Carro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/repository/CarroRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/service/CarroService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/CarroTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Anuncio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Anuncio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ValidacaoException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/AnuncioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/AnuncioTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Anuncio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Carro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Carro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/repository/CarroRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/service/CarroService.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -39,20 +36,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;full.screen.before.presentation.mode&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "full.screen.before.presentation.mode": "true",
+    "last_opened_file_path": "C:/Users/davir/IdeaProjects/YCarros",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -143,6 +142,9 @@
       <updated>1668370378322</updated>
       <workItem from="1668370381123" duration="12759000" />
       <workItem from="1668625089734" duration="5000000" />
+      <workItem from="1669244482575" duration="3016000" />
+      <workItem from="1670183817457" duration="24000" />
+      <workItem from="1670605044038" duration="4336000" />
     </task>
     <servers />
   </component>
@@ -159,5 +161,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
