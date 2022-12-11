@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70bcc7fd-059b-468c-8107-12bca76dff8c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veiculos/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/dominio/Anunciante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veiculos/dominio/Anunciante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/dominio/Anuncio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veiculos/dominio/Anuncio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/dominio/Comprador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veiculos/dominio/Comprador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/dominio/Veiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veiculos/dominio/Veiculo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/dominio/Venda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veiculos/dominio/Venda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/servicos/GerenciadorDeVeiculos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veiculos/servicos/GerenciadorDeVeiculos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/servicos/GerenciadorDeVendas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veiculos/servicos/GerenciadorDeVendas.java" afterDir="false" />
-    </list>
+    <list default="true" id="70bcc7fd-059b-468c-8107-12bca76dff8c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,6 +24,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2HVViZENoUnyk9wtkM0G1KrvV7Q" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -170,7 +163,7 @@
       <workItem from="1670183817457" duration="24000" />
       <workItem from="1670605044038" duration="5424000" />
       <workItem from="1670622204744" duration="19553000" />
-      <workItem from="1670705674718" duration="9817000" />
+      <workItem from="1670705674718" duration="10344000" />
     </task>
     <servers />
   </component>
