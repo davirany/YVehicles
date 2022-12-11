@@ -29,7 +29,7 @@ public class Veiculo {
         return Collections.emptyList();
     }
 
-    public List<Veiculo> listarPorPreco(BigInteger menorValorPreco, BigInteger maiorValorPreco) {
+    public List<Veiculo> listarPorPreco(int menorValorPreco, int maiorValorPreco) {
 
         return Collections.emptyList();
     }

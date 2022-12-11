@@ -11,7 +11,7 @@ public class GerenciadorDeVeiculos {
         veiculos.add(veiculo);
     }
     public void removerVeiculo(Veiculo veiculo) {veiculos.remove(veiculo);}
-    public List<Veiculo> listarVeiculos() {
+    public List<Veiculo> listaVeiculos() {
         return veiculos;
     }
 

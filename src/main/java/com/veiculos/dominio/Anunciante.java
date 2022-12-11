@@ -1,10 +1,16 @@
 package com.veiculos.dominio;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Anunciante extends Usuario{
-    public Anunciante(String nome, String telefone, String email) {
+    private int anunciosAtivos;
+    public Anunciante(String nome, String telefone, String email, int anunciosAtivos) {
         super(nome, telefone, email);
+    }
+
+    public int getAnunciosAtivos() {
+        return anunciosAtivos;
+    }
+
+    public void setAnunciosAtivos(int anunciosAtivos) {
+        this.anunciosAtivos = anunciosAtivos;
     }
 }

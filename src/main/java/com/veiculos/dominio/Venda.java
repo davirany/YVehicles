@@ -1,29 +1,17 @@
 package com.veiculos.dominio;
 
-import java.util.Date;
 
 public class Venda {
-    private Veiculo veiculo;
+    private Anuncio anuncio;
     private String data;
-    private Anunciante anunciante;
     private Comprador comprador;
     private int id;
 
-
-    public Venda(Veiculo veiculo, String data, Anunciante anunciante, Comprador comprador, int id) {
-        this.veiculo = veiculo;
+    public Venda(Anuncio anuncio, String data, Comprador comprador, int id) {
+        this.anuncio = anuncio;
         this.data = data;
-        this.anunciante = anunciante;
         this.comprador = comprador;
         this.id = id;
-    }
-
-    public Veiculo getVeiculo() {
-        return veiculo;
-    }
-
-    public void setVeiculo(Veiculo veiculo) {
-        this.veiculo = veiculo;
     }
 
     public String getData() {
@@ -34,16 +22,8 @@ public class Venda {
         this.data = data;
     }
 
-    public String getAnunciante() {
-        return anunciante.getNome();
-    }
-
-    public void setAnunciante(Anunciante anunciante) {
-        this.anunciante = anunciante;
-    }
-
-    public String getComprador() {
-        return comprador.getNome();
+    public Comprador getComprador() {
+        return comprador;
     }
 
     public void setComprador(Comprador comprador) {
@@ -56,5 +36,13 @@ public class Venda {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public Anuncio getAnuncio() {
+        return anuncio;
+    }
+
+    public void setAnuncio(Anuncio anuncio) {
+        this.anuncio = anuncio;
     }
 }
