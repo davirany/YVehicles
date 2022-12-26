@@ -19,7 +19,7 @@ public class Main {
     }
 
     private void executa() {
-        Anunciante anunciante = new Anunciante("Davi", "61-91234-5678", "davi@email", 0);
+        Anunciante anunciante = new Anunciante("Davi", "61-91234-5678", "davi@email", 0, 0);
 
         Veiculo veiculo = adicionarVeiculo("Chevrolet", "Camaro", "Amarelo", 0, 80000, 2022, 2023);
         gerenciadorDeVeiculos.criarVeiculo(veiculo);
@@ -98,6 +98,8 @@ public class Main {
         gerenciadorDeAnuncios.removerAnuncio(anuncio);
         int comprados = comprador.getQtdCarrosComprados();
         comprador.setQtdCarrosComprados(comprados+1);
+        int vendidos = anuncio.getAnunciante().getCarrosVendidos();
+        anuncio.getAnunciante().setCarrosVendidos(vendidos+1);
         return new Venda(anuncio, dataVenda, comprador, randomVenda);
     }
 }
