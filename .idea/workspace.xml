@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="70bcc7fd-059b-468c-8107-12bca76dff8c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veiculos/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/dominio/Marca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veiculos/dominio/Marca.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,27 +39,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "full.screen.before.presentation.mode": "true",
-    "last_directory_selection": "C:/Users/davir/IdeaProjects/YCarros/src/main/java/com/veiculos",
-    "last_opened_file_path": "C:/Users/davir/IdeaProjects/YCarros",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/davir/IdeaProjects/YCarros/src/main/java/com/veiculos&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/davir/IdeaProjects/YCarros/src/main/java/com/veiculos/diagrama&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.veiculos.dominio" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\davir\IdeaProjects\YCarros\src\main\java\com\veiculos\diagrama" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -167,6 +172,10 @@
       <workItem from="1670605044038" duration="5424000" />
       <workItem from="1670622204744" duration="19553000" />
       <workItem from="1670705674718" duration="14524000" />
+      <workItem from="1670786807349" duration="616000" />
+      <workItem from="1671014114029" duration="238000" />
+      <workItem from="1671480052870" duration="1466000" />
+      <workItem from="1671904010299" duration="4967000" />
     </task>
     <servers />
   </component>

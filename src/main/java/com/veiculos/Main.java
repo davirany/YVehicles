@@ -4,7 +4,6 @@ import com.veiculos.dominio.*;
 import com.veiculos.servicos.GerenciadorDeAnuncios;
 import com.veiculos.servicos.GerenciadorDeVeiculos;
 import com.veiculos.servicos.GerenciadorDeVendas;
-
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -76,13 +75,17 @@ public class Main {
     }
 
     private Veiculo adicionarVeiculo(String nomeMarca, String nomeModelo, String cor, int quilometragem, int preco, int anoFabricacao, int anoModelo) {
-        Modelo modelo = criarModelo(nomeModelo, nomeMarca);
+        Marca marca = criarMarca(nomeMarca, "Nacionalidade", 2022);
+        Modelo modelo = criarModelo(nomeModelo, marca);
         int randomVeiculos = (int)(Math.random()*(1500-500+1)+500);
         return new Veiculo(modelo, anoFabricacao, anoModelo, cor, quilometragem, preco, randomVeiculos);
     }
 
-    private Modelo criarModelo( String nomeModelo, String nomeMarca) {
-        Marca marca = new Marca(nomeMarca);
+    private Marca criarMarca(String nomeMarca, String nacionalidade, int anoFundacao) {
+        return new Marca(nomeMarca, nacionalidade, anoFundacao);
+    }
+
+    private Modelo criarModelo( String nomeModelo, Marca marca) {
         return new Modelo(nomeModelo, marca);
     }
 
