@@ -1,6 +1,5 @@
 package com.veiculos.dominio;
 
-
 public class Venda {
     private Anuncio anuncio;
     private String data;

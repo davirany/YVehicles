@@ -57,21 +57,15 @@ public class Main {
     }
 
     private void listarVeiculos(List<Veiculo> veiculos) {
-        veiculos.forEach(s -> {
-            System.out.println("#"+s.getId() + " --> nomeMarca: " + s.getModelo().getMarca()+" | nomeVeiculo: "+s.getModelo().getNome() + " | cor: " + s.getCor() + " | anoModelo: " + s.getAnoModelo() + " | anoFabricacao: " + s.getAnoFabricacao() + " | preco: " + s.getPreco() + " | quilometragem: " + s.getQuilometragem());
-        });
+        veiculos.forEach(s -> System.out.println("#"+s.getId() + " --> nomeMarca: " + s.getModelo().getMarca()+" | nomeVeiculo: "+s.getModelo().getNome() + " | cor: " + s.getCor() + " | anoModelo: " + s.getAnoModelo() + " | anoFabricacao: " + s.getAnoFabricacao() + " | preco: " + s.getPreco() + " | quilometragem: " + s.getQuilometragem()));
     }
 
     private void listarVendas(List<Venda> vendas) {
-        vendas.forEach(v -> {
-            System.out.println("#"+v.getId() + " --> idAnuncio: " + v.getAnuncio().getId() + " | dataVenda: " + v.getData() + " | nomeComprador: " + v.getComprador().getNome()+" | telefoneComprador: "+v.getComprador().getTelefone() + " | emailComprador: " + v.getComprador().getEmail() + " | qtdCarrosComprados: " + v.getComprador().getQtdCarrosComprados());
-        });
+        vendas.forEach(v -> System.out.println("#"+v.getId() + " --> idAnuncio: " + v.getAnuncio().getId() + " | dataVenda: " + v.getData() + " | nomeComprador: " + v.getComprador().getNome()+" | telefoneComprador: "+v.getComprador().getTelefone() + " | emailComprador: " + v.getComprador().getEmail() + " | qtdCarrosComprados: " + v.getComprador().getQtdCarrosComprados()));
     }
 
     private void listarAnuncios(List<Anuncio> anuncios) {
-        anuncios.forEach(a -> {
-            System.out.println("#"+a.getId() + " --> descricao: " + a.getDescricao() + " | nomeAnunciante: " + a.getAnunciante().getNome() + " | modeloVeiculo: " + a.getVeiculo().getModelo().getNome() + " | idVeiculo: #" + a.getVeiculo().getId());
-        });
+        anuncios.forEach(a -> System.out.println("#"+a.getId() + " --> descricao: " + a.getDescricao() + " | nomeAnunciante: " + a.getAnunciante().getNome() + " | modeloVeiculo: " + a.getVeiculo().getModelo().getNome() + " | idVeiculo: #" + a.getVeiculo().getId()));
     }
 
     private Veiculo adicionarVeiculo(String nomeMarca, String nomeModelo, String cor, int quilometragem, int preco, int anoFabricacao, int anoModelo) {
@@ -98,8 +92,7 @@ public class Main {
         gerenciadorDeAnuncios.removerAnuncio(anuncio);
         int comprados = comprador.getQtdCarrosComprados();
         comprador.setQtdCarrosComprados(comprados+1);
-        int vendidos = anuncio.getAnunciante().getCarrosVendidos();
-        anuncio.getAnunciante().setCarrosVendidos(vendidos+1);
+        anuncio.getAnunciante().setQtsCarrosVendidos(qtdCarrosComprados+1);
         return new Venda(anuncio, dataVenda, comprador, randomVenda);
     }
 }

@@ -1,7 +1,5 @@
 package com.veiculos.dominio;
 
-
-import java.math.BigInteger;
 import java.util.Collections;
 import java.util.List;
 

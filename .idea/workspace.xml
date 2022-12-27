@@ -6,8 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="70bcc7fd-059b-468c-8107-12bca76dff8c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veiculos/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/dominio/Anunciante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veiculos/dominio/Anunciante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/dominio/Comprador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veiculos/dominio/Comprador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/dominio/Veiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veiculos/dominio/Veiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/dominio/Venda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veiculos/dominio/Venda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/servicos/GerenciadorDeAnuncios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veiculos/servicos/GerenciadorDeAnuncios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/servicos/GerenciadorDeVeiculos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veiculos/servicos/GerenciadorDeVeiculos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/servicos/GerenciadorDeVendas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veiculos/servicos/GerenciadorDeVendas.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +38,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2HVViZENoUnyk9wtkM0G1KrvV7Q" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -175,7 +182,7 @@
       <workItem from="1670786807349" duration="616000" />
       <workItem from="1671014114029" duration="238000" />
       <workItem from="1671480052870" duration="1466000" />
-      <workItem from="1671904010299" duration="7061000" />
+      <workItem from="1671904010299" duration="14748000" />
     </task>
     <servers />
   </component>

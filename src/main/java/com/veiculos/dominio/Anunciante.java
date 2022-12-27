@@ -1,28 +1,29 @@
 package com.veiculos.dominio;
 
 public class Anunciante extends Usuario{
-    private int anunciosAtivos;
-    private int carrosVendidos;
+    private int qtdAnunciosAtivos;
+    private int qtsCarrosVendidos;
 
-    public Anunciante(String nome, String telefone, String email, int anunciosAtivos, int carrosVendidos) {
+    public Anunciante(String nome, String telefone, String email, int qtdAnunciosAtivos, int qtsCarrosVendidos) {
         super(nome, telefone, email);
-        this.anunciosAtivos = anunciosAtivos;
-        this.carrosVendidos = carrosVendidos;
+        this.qtdAnunciosAtivos = qtdAnunciosAtivos;
+        this.qtsCarrosVendidos = qtsCarrosVendidos;
     }
 
-    public int getAnunciosAtivos() {
-        return anunciosAtivos;
+    public int getQtdAnunciosAtivos() {
+        return qtdAnunciosAtivos;
     }
 
-    public void setAnunciosAtivos(int anunciosAtivos) {
-        this.anunciosAtivos = anunciosAtivos;
+    public void setQtdAnunciosAtivos(int qtdAnunciosAtivos) {
+        this.qtdAnunciosAtivos = qtdAnunciosAtivos;
     }
 
-    public int getCarrosVendidos() {
-        return carrosVendidos;
+    public int getQtsCarrosVendidos() {
+        return qtsCarrosVendidos;
     }
 
-    public void setCarrosVendidos(int carrosVendidos) {
-        this.carrosVendidos = carrosVendidos;
+    public void setQtsCarrosVendidos(int qtsCarrosVendidos) {
+        this.qtsCarrosVendidos = qtsCarrosVendidos;
     }
+
 }
