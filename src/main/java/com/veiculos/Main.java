@@ -19,21 +19,22 @@ public class Main {
     }
 
     private void executa() {
-        Anunciante anunciante = new Anunciante("Davi", "61-91234-5678", "davi@email", 0, 0);
+        Anunciante anunciante1 = new Anunciante("Davi", "61-91234-5678", "davi@email", 0, 0);
+        Comprador comprador1 = new Comprador("Joao", "61-99876-5432", "joao@gmail.com", 0);
 
         Veiculo veiculo = adicionarVeiculo("Chevrolet", "Camaro", "Amarelo", 0, 80000, 2022, 2023);
         gerenciadorDeVeiculos.criarVeiculo(veiculo);
-        Anuncio anuncio1 = new Anuncio(1, "Anuncio do carro 1", anunciante, veiculo);
+        Anuncio anuncio1 = new Anuncio(1, "Anuncio do carro 1", anunciante1, veiculo);
         gerenciadorDeAnuncios.criarAnuncio(anuncio1);
 
         Veiculo veiculo2 = adicionarVeiculo("Wolksvagen", "Golf", "Branco", 100000, 52000, 2020, 2021);
         gerenciadorDeVeiculos.criarVeiculo(veiculo2);
-        Anuncio anuncio2 = new Anuncio(2, "Anuncio do carro 2", anunciante, veiculo2);
+        Anuncio anuncio2 = new Anuncio(2, "Anuncio do carro 2", anunciante1, veiculo2);
         gerenciadorDeAnuncios.criarAnuncio(anuncio2);
 
         Veiculo veiculo3 = adicionarVeiculo("Ford", "Ka", "Preto", 0, 65000, 2019, 2019);
         gerenciadorDeVeiculos.criarVeiculo(veiculo3);
-        Anuncio anuncio3 = new Anuncio(3, "Anuncio do carro 3", anunciante, veiculo3);
+        Anuncio anuncio3 = new Anuncio(3, "Anuncio do carro 3", anunciante1, veiculo3);
         gerenciadorDeAnuncios.criarAnuncio(anuncio3);
 
         List<Veiculo> veiculos = gerenciadorDeVeiculos.listaVeiculos();
@@ -46,14 +47,15 @@ public class Main {
         System.out.println("\n-----Tres objetos Anuncio foram criados-----");
         listarAnuncios(anuncios);
         System.out.println("\n-----Uma venda foi realizada-----");
-        Venda venda = adicionarVenda(anuncio1, "Joao","61-98765-4321", "joao@email.com", 0);
+        Venda venda = adicionarVenda(anuncio1, comprador1);
         gerenciadorDeVendas.criarVenda(venda);
         listarVeiculos(veiculos);
         System.out.println("\n-----Essa foi a Venda-----");
         listarVendas(vendas);
         System.out.println("\n-----O objeto Anuncio da venda foi deletado-----");
         listarAnuncios(anuncios);
-
+        System.out.println("\n---Lista de Veiculos comprados pelo comprador1---");
+        listarVeiculosComprados(comprador1);
     }
 
     private void listarVeiculos(List<Veiculo> veiculos) {
@@ -66,6 +68,12 @@ public class Main {
 
     private void listarAnuncios(List<Anuncio> anuncios) {
         anuncios.forEach(a -> System.out.println("#"+a.getId() + " --> descricao: " + a.getDescricao() + " | nomeAnunciante: " + a.getAnunciante().getNome() + " | modeloVeiculo: " + a.getVeiculo().getModelo().getNome() + " | idVeiculo: #" + a.getVeiculo().getId()));
+    }
+
+    private void listarVeiculosComprados(Comprador comprador) {
+        List<Veiculo> veiculosComprados = comprador.getVeiculosComprados();
+        System.out.println("\n---Carros comprados pelo " + comprador.getNome() + "---");
+        veiculosComprados.forEach(d -> System.out.println("#"+d.getId() + " --> nomeMarca: " + d.getModelo().getMarca()+" | nomeVeiculo: "+d.getModelo().getNome() + " | cor: " + d.getCor() + " | anoModelo: " + d.getAnoModelo() + " | anoFabricacao: " + d.getAnoFabricacao() + " | preco: " + d.getPreco() + " | quilometragem: " + d.getQuilometragem()));
     }
 
     private Veiculo adicionarVeiculo(String nomeMarca, String nomeModelo, String cor, int quilometragem, int preco, int anoFabricacao, int anoModelo) {
@@ -83,16 +91,16 @@ public class Main {
         return new Modelo(nomeModelo, marca);
     }
 
-    private Venda adicionarVenda(Anuncio anuncio, String nomeComprador, String telefoneComprador, String emailComprador, int qtdCarrosComprados) {
-        Comprador comprador = new Comprador(nomeComprador, telefoneComprador, emailComprador, qtdCarrosComprados);
+    private Venda adicionarVenda(Anuncio anuncio, Comprador comprador) {
         int randomVenda = (int)(Math.random()*(1000-500+1)+500);
         String dataVenda = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"));
         Veiculo veiculo = anuncio.getVeiculo();
+        comprador.adicionarCarroComprado(anuncio.getVeiculo());
         gerenciadorDeVeiculos.removerVeiculo(veiculo);
         gerenciadorDeAnuncios.removerAnuncio(anuncio);
         int comprados = comprador.getQtdCarrosComprados();
         comprador.setQtdCarrosComprados(comprados+1);
-        anuncio.getAnunciante().setQtsCarrosVendidos(qtdCarrosComprados+1);
+        anuncio.getAnunciante().setQtsCarrosVendidos(comprador.getQtdCarrosComprados()+1);
         return new Venda(anuncio, dataVenda, comprador, randomVenda);
     }
 }
