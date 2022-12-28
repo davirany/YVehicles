@@ -5,9 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70bcc7fd-059b-468c-8107-12bca76dff8c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/domain/Advertiser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/domain/Advertising.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/domain/Brand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/domain/Buyer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/domain/Model.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/domain/Sell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/domain/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/domain/Vehicle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/services/AdvertisingManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/services/SellsManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/services/VehiclesManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veiculos/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/dominio/Anunciante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veiculos/dominio/Anunciante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/diagrama/YCarros.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/diagram/YCarros.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/dominio/Anunciante.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/dominio/Anuncio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/dominio/Comprador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/dominio/Marca.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/dominio/Modelo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/dominio/Usuario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/dominio/Veiculo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/dominio/Venda.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/servicos/GerenciadorDeAnuncios.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/servicos/GerenciadorDeVeiculos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veiculos/servicos/GerenciadorDeVendas.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +77,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -71,13 +94,13 @@
       <recent name="com.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.com.vehicles.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.veiculos.Main" />
+      <option name="MAIN_CLASS_NAME" value="com.vehicles.Main" />
       <module name="YCarros" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.veiculos.*" />
+          <option name="PATTERN" value="com.vehicles.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -149,7 +172,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.com.vehicles.Main" />
         <item itemvalue="JUnit.CarroTest" />
         <item itemvalue="JUnit.AnuncioTest" />
         <item itemvalue="JUnit.AnuncioTest.getAno" />
@@ -175,7 +198,8 @@
       <workItem from="1670786807349" duration="616000" />
       <workItem from="1671014114029" duration="238000" />
       <workItem from="1671480052870" duration="1466000" />
-      <workItem from="1671904010299" duration="24984000" />
+      <workItem from="1671904010299" duration="28265000" />
+      <workItem from="1672249557169" duration="4104000" />
     </task>
     <servers />
   </component>
