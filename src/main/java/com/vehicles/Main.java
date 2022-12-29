@@ -1,17 +1,17 @@
 package com.vehicles;
 
 import com.vehicles.domain.*;
-import com.vehicles.services.AdvertisingManager;
-import com.vehicles.services.VehiclesManager;
-import com.vehicles.services.SellsManager;
+import com.vehicles.services.AdvertisingService;
+import com.vehicles.services.VehiclesService;
+import com.vehicles.services.SellsService;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class Main {
-    private final SellsManager sellsManager = new SellsManager();
-    private final VehiclesManager vehiclesManager = new VehiclesManager();
-    private final AdvertisingManager advertisingManager = new AdvertisingManager();
+    private final SellsService sellsService = new SellsService();
+    private final VehiclesService vehiclesService = new VehiclesService();
+    private final AdvertisingService advertisingService = new AdvertisingService();
 
     public static void main(String[] args) {
         Main main = new Main();
@@ -23,26 +23,26 @@ public class Main {
         Buyer buyer1 = new Buyer("John", "61-99876-5432", "john@gmail.com", 0);
 
         Vehicle vehicle = addVehicle("Chevrolet", "Camaro", "Yellow", 0, 80000, 2022, 2023);
-        vehiclesManager.createVehicle(vehicle);
+        vehiclesService.createVehicle(vehicle);
         Advertising advertising1 = new Advertising(1, "Advertising of car 1", advertiser1, vehicle);
         addAdvertising(advertising1);
-        advertisingManager.createAdvertising(advertising1);
+        advertisingService.createAdvertising(advertising1);
 
         Vehicle vehicle2 = addVehicle("Volkswagen", "Golf", "White", 100000, 52000, 2020, 2021);
-        vehiclesManager.createVehicle(vehicle2);
+        vehiclesService.createVehicle(vehicle2);
         Advertising advertising2 = new Advertising(2, "Advertising of car 2", advertiser1, vehicle2);
         addAdvertising(advertising2);
-        advertisingManager.createAdvertising(advertising2);
+        advertisingService.createAdvertising(advertising2);
 
         Vehicle vehicle3 = addVehicle("Ford", "Ka", "Black", 0, 65000, 2019, 2019);
-        vehiclesManager.createVehicle(vehicle3);
+        vehiclesService.createVehicle(vehicle3);
         Advertising advertising3 = new Advertising(3, "Advertising of car 3", advertiser1, vehicle3);
         addAdvertising(advertising3);
-        advertisingManager.createAdvertising(advertising3);
+        advertisingService.createAdvertising(advertising3);
 
-        List<Vehicle> vehicles = vehiclesManager.listVehicles();
-        List<Sell> sells = sellsManager.listSells();
-        List<Advertising> advertisements = advertisingManager.listAdvertisements();
+        List<Vehicle> vehicles = vehiclesService.listVehicles();
+        List<Sell> sells = sellsService.listSells();
+        List<Advertising> advertisements = advertisingService.listAdvertisements();
 
 
         System.out.println("\n-----Three objects Vehicle were created-----");
@@ -53,7 +53,7 @@ public class Main {
         listAdvertisedVehicles(advertiser1);
         System.out.println("\n-----A sell was made-----");
         Sell sell = addSell(advertising1, buyer1);
-        sellsManager.createSell(sell);
+        sellsService.createSell(sell);
         listVehicles(vehicles);
         System.out.println("\n-----This was the Sell-----");
         listSells(sells);
@@ -63,6 +63,10 @@ public class Main {
         listBoughtVehicles(buyer1);
         System.out.println("\n-----Advertisements of advertiser1-----");
         listAdvertisedVehicles(advertiser1);
+        System.out.println("\n-----Printing all vehicles by price-----");
+        vehiclesService.listByPrice(6000, 100000);
+        System.out.println("\n-----Printing all vehicles by brand-----");
+        vehiclesService.listByBrand("Ford");
     }
 
     private void listVehicles(List<Vehicle> vehicles) {
@@ -85,7 +89,7 @@ public class Main {
 
     private void listAdvertisedVehicles(Advertiser advertiser) {
         List<Vehicle> advertisedVehicle = advertiser.getAdvertisedVehicle();
-        System.out.println("\n---list of advertised vehicles by  " + advertiser.getName() + "---");
+        System.out.println("\n---list of advertised vehicles by " + advertiser.getName() + "---");
         advertisedVehicle.forEach(k -> System.out.println("#"+k.getId() + " --> brandName: " + k.getModel().getBrand()+" | vehicleName: "+k.getModel().getName() + " | color: " + k.getColor() + " | modelYear: " + k.getModelYear() + " | manufactureYear: " + k.getManufactureYear() + " | price: " + k.getPrice() + " | mileage: " + k.getMileage()));
     }
 
@@ -116,8 +120,8 @@ public class Main {
         buyer.addBoughtVehicle(advertising.getVehicle());
         Advertiser advertiser = advertising.getAdvertiser();
         advertiser.removeAdvertisedVehicle(advertising.getVehicle());
-        vehiclesManager.removeVehicle(vehicle);
-        advertisingManager.removeAdvertising(advertising);
+        vehiclesService.removeVehicle(vehicle);
+        advertisingService.removeAdvertising(advertising);
         int bought = buyer.getAmountBoughtVehicles();
         buyer.setAmountBoughtVehicles(bought+1);
         advertising.getAdvertiser().setAmountVehiclesSold(buyer.getAmountBoughtVehicles()+1);

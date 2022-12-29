@@ -76,19 +76,4 @@ public class Vehicle {
     public void setId(int id) {
         this.id = id;
     }
-
-    public List<Vehicle> listVehicles() {
-
-        return Collections.emptyList();
-    }
-
-    public List<Vehicle> listByPrice(int smallPriceValue, int bigPriceValue) {
-
-        return Collections.emptyList();
-    }
-
-    public List<Vehicle> listByBrand(Brand brand) {
-
-        return Collections.emptyList();
-    }
 }

@@ -5,7 +5,7 @@ import com.vehicles.domain.Advertising;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdvertisingManager {
+public class AdvertisingService {
     private final List<Advertising> advertisements = new ArrayList<>();
 
     public void createAdvertising(Advertising advertising) {
