@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="70bcc7fd-059b-468c-8107-12bca76dff8c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/domain/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/domain/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/services/AdvertisingManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/services/AdvertisingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/services/SellsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/services/SellsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/services/VehiclesManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/services/VehiclesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/diagram/YCarros.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +53,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -179,7 +175,7 @@
       <workItem from="1671014114029" duration="238000" />
       <workItem from="1671480052870" duration="1466000" />
       <workItem from="1671904010299" duration="28265000" />
-      <workItem from="1672249557169" duration="8782000" />
+      <workItem from="1672249557169" duration="13782000" />
     </task>
     <servers />
   </component>
