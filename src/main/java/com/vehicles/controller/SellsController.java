@@ -4,7 +4,7 @@ import com.vehicles.model.Sell;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SellsService {
+public class SellsController {
     private final List<Sell> sells = new ArrayList<>();
 
     public List<Sell> listSells() {

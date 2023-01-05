@@ -1,17 +1,17 @@
 package com.vehicles;
 
 import com.vehicles.model.*;
-import com.vehicles.controller.AdvertisingService;
-import com.vehicles.controller.VehiclesService;
-import com.vehicles.controller.SellsService;
+import com.vehicles.controller.AdvertisingController;
+import com.vehicles.controller.VehiclesController;
+import com.vehicles.controller.SellsController;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class Main {
-    private final SellsService sellsService = new SellsService();
-    private final VehiclesService vehiclesService = new VehiclesService();
-    private final AdvertisingService advertisingService = new AdvertisingService();
+    private final SellsController sellsController = new SellsController();
+    private final VehiclesController vehiclesController = new VehiclesController();
+    private final AdvertisingController advertisingController = new AdvertisingController();
 
     public static void main(String[] args) {
         Main main = new Main();
@@ -23,26 +23,26 @@ public class Main {
         Buyer buyer1 = new Buyer("John", "61-99876-5432", "john@gmail.com", 0);
 
         Vehicle vehicle = addVehicle("Chevrolet", "Camaro", "Yellow", 0, 80000, 2022, 2023);
-        vehiclesService.createVehicle(vehicle);
+        vehiclesController.createVehicle(vehicle);
         Advertising advertising1 = new Advertising(1, "Advertising of car 1", advertiser1, vehicle);
         addAdvertising(advertising1);
-        advertisingService.createAdvertising(advertising1);
+        advertisingController.createAdvertising(advertising1);
 
         Vehicle vehicle2 = addVehicle("Volkswagen", "Golf", "White", 100000, 52000, 2020, 2021);
-        vehiclesService.createVehicle(vehicle2);
+        vehiclesController.createVehicle(vehicle2);
         Advertising advertising2 = new Advertising(2, "Advertising of car 2", advertiser1, vehicle2);
         addAdvertising(advertising2);
-        advertisingService.createAdvertising(advertising2);
+        advertisingController.createAdvertising(advertising2);
 
         Vehicle vehicle3 = addVehicle("Ford", "Ka", "Black", 0, 65000, 2019, 2019);
-        vehiclesService.createVehicle(vehicle3);
+        vehiclesController.createVehicle(vehicle3);
         Advertising advertising3 = new Advertising(3, "Advertising of car 3", advertiser1, vehicle3);
         addAdvertising(advertising3);
-        advertisingService.createAdvertising(advertising3);
+        advertisingController.createAdvertising(advertising3);
 
-        List<Vehicle> vehicles = vehiclesService.listVehicles();
-        List<Sell> sells = sellsService.listSells();
-        List<Advertising> advertisements = advertisingService.listAdvertisements();
+        List<Vehicle> vehicles = vehiclesController.listVehicles();
+        List<Sell> sells = sellsController.listSells();
+        List<Advertising> advertisements = advertisingController.getAdvertisements();
 
 
         System.out.println("\n-----Three objects Vehicle were created-----");
@@ -53,7 +53,7 @@ public class Main {
         listAdvertisedVehicles(advertiser1);
         System.out.println("\n-----A sell was made-----");
         Sell sell = addSell(advertising1, buyer1);
-        sellsService.createSell(sell);
+        sellsController.createSell(sell);
         listVehicles(vehicles);
         System.out.println("\n-----This was the Sell-----");
         listSells(sells);
@@ -64,9 +64,9 @@ public class Main {
         System.out.println("\n-----Advertisements of advertiser1-----");
         listAdvertisedVehicles(advertiser1);
         System.out.println("\n-----Printing all vehicles by price-----");
-        vehiclesService.listByPrice(6000, 100000);
+        vehiclesController.listByPrice(6000, 100000);
         System.out.println("\n-----Printing all vehicles by brand-----");
-        vehiclesService.listByBrand("Ford");
+        vehiclesController.listByBrand("Ford");
     }
 
     private void listVehicles(List<Vehicle> vehicles) {
@@ -120,8 +120,8 @@ public class Main {
         buyer.addBoughtVehicle(advertising.getVehicle());
         Advertiser advertiser = advertising.getAdvertiser();
         advertiser.removeAdvertisedVehicle(advertising.getVehicle());
-        vehiclesService.removeVehicle(vehicle);
-        advertisingService.removeAdvertising(advertising);
+        vehiclesController.removeVehicle(vehicle);
+        advertisingController.removeAdvertising(advertising);
         int bought = buyer.getAmountBoughtVehicles();
         buyer.setAmountBoughtVehicles(bought+1);
         advertising.getAdvertiser().setAmountVehiclesSold(buyer.getAmountBoughtVehicles()+1);

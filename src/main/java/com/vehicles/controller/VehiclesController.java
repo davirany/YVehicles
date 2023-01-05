@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class VehiclesService {
+public class VehiclesController {
     private final List<Vehicle> vehicles = new ArrayList<>();
 
     public void createVehicle(Vehicle vehicle) {

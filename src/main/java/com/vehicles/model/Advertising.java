@@ -47,10 +47,4 @@ public class Advertising {
     public void setAdvertiser(Advertiser advertiser) {
         this.advertiser = advertiser;
     }
-
-    /*TODO create consultTest*/
-    public List<Advertising> consult() {
-        /*TODO Implement consult method*/
-        return Collections.emptyList();
-    }
 }
