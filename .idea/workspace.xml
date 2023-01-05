@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70bcc7fd-059b-468c-8107-12bca76dff8c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/controller/VehiclesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/controller/VehiclesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/model/Buyer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/model/Buyer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/vehicles/controller/VehiclesControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vehicles/controller/VehiclesControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,23 +71,23 @@
       <recent name="C:\Users\davir\IdeaProjects\YCarros\src\main\java\com\vehicles\diagram" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.vehicles.model" />
       <recent name="com.vehicles.controller" />
       <recent name="com.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.VehiclesControllerTest">
-    <configuration name="SellsControllerTest.createSell" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.BuyerTest">
+    <configuration name="BuyerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="YCarros" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.vehicles.controller.*" />
+          <option name="PATTERN" value="com.vehicles.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.vehicles.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.vehicles.controller.SellsControllerTest" />
-      <option name="METHOD_NAME" value="createSell" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.vehicles.model" />
+      <option name="MAIN_CLASS_NAME" value="com.vehicles.model.BuyerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -158,11 +157,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BuyerTest" />
         <item itemvalue="JUnit.VehiclesControllerTest" />
         <item itemvalue="JUnit.VehiclesControllerTest.listByPrice" />
         <item itemvalue="JUnit.VehiclesControllerTest.listByBrand" />
         <item itemvalue="JUnit.VehiclesControllerTest.createVehicle" />
-        <item itemvalue="JUnit.SellsControllerTest.createSell" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +186,7 @@
       <workItem from="1671904010299" duration="28265000" />
       <workItem from="1672249557169" duration="15941000" />
       <workItem from="1672879584572" duration="9071000" />
-      <workItem from="1672945974146" duration="11886000" />
+      <workItem from="1672945974146" duration="13531000" />
     </task>
     <servers />
   </component>

@@ -8,7 +8,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class VehiclesControllerTest {
-    /*TODO*/
     VehiclesController vehiclesController = new VehiclesController();
     @Test
     void createVehicle() {

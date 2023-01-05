@@ -34,12 +34,8 @@ public class Buyer extends User {
         this.boughtVehicles = boughtVehicles;
     }
 
-    /*TODO create tests for listBoughtVehicles(), addBoughtVehicle();*/
-    public List<Vehicle> listBoughtVehicles() {
-        return boughtVehicles;
-    }
-
     public void addBoughtVehicle(Vehicle vehicle) {
+        amountBoughtVehicles++;
         boughtVehicles.add(vehicle);
     }
 }
