@@ -1,4 +1,4 @@
-package com.vehicles.domain;
+package com.vehicles.model;
 
 import java.util.Collections;
 import java.util.List;
@@ -48,8 +48,9 @@ public class Advertising {
         this.advertiser = advertiser;
     }
 
+    /*TODO create consultTest*/
     public List<Advertising> consult() {
-
+        /*TODO Implement consult method*/
         return Collections.emptyList();
     }
 }

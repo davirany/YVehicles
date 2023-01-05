@@ -1,4 +1,4 @@
-package com.vehicles.domain;
+package com.vehicles.model;
 
 public abstract class User {
     private String name;

@@ -1,9 +1,9 @@
 package com.vehicles;
 
-import com.vehicles.domain.*;
-import com.vehicles.services.AdvertisingService;
-import com.vehicles.services.VehiclesService;
-import com.vehicles.services.SellsService;
+import com.vehicles.model.*;
+import com.vehicles.controller.AdvertisingService;
+import com.vehicles.controller.VehiclesService;
+import com.vehicles.controller.SellsService;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;

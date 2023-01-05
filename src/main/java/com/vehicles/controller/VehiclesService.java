@@ -1,7 +1,6 @@
-package com.vehicles.services;
+package com.vehicles.controller;
 
-import com.vehicles.domain.Brand;
-import com.vehicles.domain.Vehicle;
+import com.vehicles.model.Vehicle;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;

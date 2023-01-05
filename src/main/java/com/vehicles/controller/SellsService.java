@@ -1,6 +1,6 @@
-package com.vehicles.services;
+package com.vehicles.controller;
 
-import com.vehicles.domain.Sell;
+import com.vehicles.model.Sell;
 import java.util.ArrayList;
 import java.util.List;
 

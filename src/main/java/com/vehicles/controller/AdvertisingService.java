@@ -1,6 +1,6 @@
-package com.vehicles.services;
+package com.vehicles.controller;
 
-import com.vehicles.domain.Advertising;
+import com.vehicles.model.Advertising;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.vehicles.domain;
+package com.vehicles.model;
 
 public class Brand {
     private String name;

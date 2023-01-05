@@ -1,4 +1,4 @@
-package com.vehicles.domain;
+package com.vehicles.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +34,7 @@ public class Buyer extends User {
         this.boughtVehicles = boughtVehicles;
     }
 
+    /*TODO create tests for listBoughtVehicles(), addBoughtVehicle();*/
     public List<Vehicle> listBoughtVehicles() {
         return boughtVehicles;
     }

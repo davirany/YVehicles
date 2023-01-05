@@ -1,7 +1,4 @@
-package com.vehicles.domain;
-
-import java.util.Collections;
-import java.util.List;
+package com.vehicles.model;
 
 public class Vehicle {
     private Model model;
