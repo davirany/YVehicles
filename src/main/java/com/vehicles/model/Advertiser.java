@@ -45,10 +45,7 @@ public class Advertiser extends User {
         this.advertisedVehicle = advertisedVehicle;
     }
 
-    /*TODO Create tests for listAdvertisedVehicle(), addAdvertisedCar() and removeAdvertisedCar()*/
-    public List<Vehicle> listAdvertisedVehicle() {
-        return advertisedVehicle;
-    }
+    /*TODO Create tests for addAdvertisedCar() and removeAdvertisedCar()*/
 
     public void addAdvertisedCar(Vehicle vehicle) {
         advertisedVehicle.add(vehicle);

@@ -76,7 +76,7 @@
       <recent name="com.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BuyerTest">
+  <component name="RunManager" selected="JUnit.BuyerTest.removeBoughtVehicle">
     <configuration name="BuyerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="YCarros" />
       <extension name="coverage">
@@ -92,6 +92,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BuyerTest.removeBoughtVehicle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="YCarros" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vehicles.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.vehicles.model" />
+      <option name="MAIN_CLASS_NAME" value="com.vehicles.model.BuyerTest" />
+      <option name="METHOD_NAME" value="removeBoughtVehicle" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="VehiclesControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="YCarros" />
       <extension name="coverage">
@@ -103,22 +119,6 @@
       <option name="PACKAGE_NAME" value="com.vehicles.controller" />
       <option name="MAIN_CLASS_NAME" value="com.vehicles.controller.VehiclesControllerTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="VehiclesControllerTest.createVehicle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="YCarros" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.vehicles.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.vehicles.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.vehicles.controller.VehiclesControllerTest" />
-      <option name="METHOD_NAME" value="createVehicle" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -157,11 +157,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BuyerTest.removeBoughtVehicle" />
         <item itemvalue="JUnit.BuyerTest" />
         <item itemvalue="JUnit.VehiclesControllerTest" />
         <item itemvalue="JUnit.VehiclesControllerTest.listByPrice" />
         <item itemvalue="JUnit.VehiclesControllerTest.listByBrand" />
-        <item itemvalue="JUnit.VehiclesControllerTest.createVehicle" />
       </list>
     </recent_temporary>
   </component>

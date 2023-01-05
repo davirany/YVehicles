@@ -38,4 +38,9 @@ public class Buyer extends User {
         amountBoughtVehicles++;
         boughtVehicles.add(vehicle);
     }
+
+    public void removeBoughtVehicle(Vehicle vehicle) {
+        amountBoughtVehicles--;
+        boughtVehicles.remove(vehicle);
+    }
 }
