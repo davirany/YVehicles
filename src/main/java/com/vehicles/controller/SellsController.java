@@ -7,7 +7,7 @@ import java.util.List;
 public class SellsController {
     private final List<Sell> sells = new ArrayList<>();
 
-    public List<Sell> listSells() {
+    public List<Sell> getSells() {
         return sells;
     }
 

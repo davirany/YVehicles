@@ -41,7 +41,7 @@ public class Main {
         advertisingController.createAdvertising(advertising3);
 
         List<Vehicle> vehicles = vehiclesController.listVehicles();
-        List<Sell> sells = sellsController.listSells();
+        List<Sell> sells = sellsController.getSells();
         List<Advertising> advertisements = advertisingController.getAdvertisements();
 
 
