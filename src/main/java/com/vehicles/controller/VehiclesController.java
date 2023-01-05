@@ -8,6 +8,10 @@ import java.util.Objects;
 public class VehiclesController {
     private final List<Vehicle> vehicles = new ArrayList<>();
 
+    public List<Vehicle> getVehicles() {
+        return vehicles;
+    }
+
     public void createVehicle(Vehicle vehicle) {
         vehicles.add(vehicle);
     }
@@ -16,24 +20,24 @@ public class VehiclesController {
         vehicles.remove(vehicle);
     }
 
-    public List<Vehicle> listVehicles() {
-        return vehicles;
-    }
-
-    public void listByPrice(int smallPriceValue, int bigPriceValue) {
+    public List<Vehicle> listByPrice(int smallPriceValue, int bigPriceValue) {
+        List<Vehicle> newList = new ArrayList<>();
         vehicles.forEach(vehicle -> {
             if (vehicle.getPrice() >= smallPriceValue & vehicle.getPrice() <= bigPriceValue) {
-                System.out.println("#" + vehicle.getId() + " | vehicleName: " + vehicle.getModel().getName() + " | vehicleBrand: " + vehicle.getModel().getBrand());
+                newList.add(vehicle);
             }
         });
+    return newList;
     }
 
-    public void listByBrand(String brand) {
+    public List<Vehicle> listByBrand(String brand) {
+        List<Vehicle> newList = new ArrayList<>();
         vehicles.forEach(vehicle -> {
             if (Objects.equals(vehicle.getModel().getBrand(), brand)) {
-                System.out.println("#"+vehicle.getId() + " --> brandName: " + vehicle.getModel().getBrand()+" | vehicleName: "+vehicle.getModel().getName() + " | color: " + vehicle.getColor() + " | modelYear: " + vehicle.getModelYear() + " | manufactureYear: " + vehicle.getManufactureYear() + " | price: " + vehicle.getPrice() + " | mileage: " + vehicle.getMileage());
+                newList.add(vehicle);
             }
         });
+        return newList;
     }
 
 }

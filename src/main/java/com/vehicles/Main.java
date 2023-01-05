@@ -6,7 +6,9 @@ import com.vehicles.controller.VehiclesController;
 import com.vehicles.controller.SellsController;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Main {
     private final SellsController sellsController = new SellsController();
@@ -40,7 +42,7 @@ public class Main {
         addAdvertising(advertising3);
         advertisingController.createAdvertising(advertising3);
 
-        List<Vehicle> vehicles = vehiclesController.listVehicles();
+        List<Vehicle> vehicles = vehiclesController.getVehicles();
         List<Sell> sells = sellsController.getSells();
         List<Advertising> advertisements = advertisingController.getAdvertisements();
 
@@ -64,9 +66,9 @@ public class Main {
         System.out.println("\n-----Advertisements of advertiser1-----");
         listAdvertisedVehicles(advertiser1);
         System.out.println("\n-----Printing all vehicles by price-----");
-        vehiclesController.listByPrice(6000, 100000);
+        listByPrice(vehicles,6000, 100000);
         System.out.println("\n-----Printing all vehicles by brand-----");
-        vehiclesController.listByBrand("Ford");
+        listByBrand(vehicles,"Ford");
     }
 
     private void listVehicles(List<Vehicle> vehicles) {
@@ -91,6 +93,22 @@ public class Main {
         List<Vehicle> advertisedVehicle = advertiser.getAdvertisedVehicle();
         System.out.println("\n---list of advertised vehicles by " + advertiser.getName() + "---");
         advertisedVehicle.forEach(k -> System.out.println("#"+k.getId() + " --> brandName: " + k.getModel().getBrand()+" | vehicleName: "+k.getModel().getName() + " | color: " + k.getColor() + " | modelYear: " + k.getModelYear() + " | manufactureYear: " + k.getManufactureYear() + " | price: " + k.getPrice() + " | mileage: " + k.getMileage()));
+    }
+
+    public void listByPrice(List<Vehicle> vehicles,int smallPriceValue, int bigPriceValue) {
+        vehicles.forEach(vehicle -> {
+            if (vehicle.getPrice() >= smallPriceValue & vehicle.getPrice() <= bigPriceValue) {
+                System.out.println("#" + vehicle.getId() + " | vehicleName: " + vehicle.getModel().getName() + " | vehicleBrand: " + vehicle.getModel().getBrand() + " | vehicleYear: " + vehicle.getManufactureYear());
+            }
+        });
+    }
+
+    public void listByBrand(List<Vehicle> vehicles, String brand) {
+        vehicles.forEach(vehicle -> {
+            if (Objects.equals(vehicle.getModel().getBrand(), brand)) {
+                System.out.println("#"+vehicle.getId() + " --> brandName: " + vehicle.getModel().getBrand()+" | vehicleName: "+vehicle.getModel().getName() + " | color: " + vehicle.getColor() + " | modelYear: " + vehicle.getModelYear() + " | manufactureYear: " + vehicle.getManufactureYear() + " | price: " + vehicle.getPrice() + " | mileage: " + vehicle.getMileage());
+            }
+        });
     }
 
     private void addAdvertising(Advertising advertising) {

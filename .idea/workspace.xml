@@ -7,7 +7,7 @@
     <list default="true" id="70bcc7fd-059b-468c-8107-12bca76dff8c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/controller/SellsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/controller/SellsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/controller/VehiclesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/controller/VehiclesController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,69 +76,7 @@
       <recent name="com.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SellsControllerTest.createSell">
-    <configuration name="AdvertisingControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="YCarros" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.vehicles.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.vehicles.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.vehicles.controller.AdvertisingControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AdvertisingControllerTest.createAdvertising" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="YCarros" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.vehicles.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.vehicles.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.vehicles.controller.AdvertisingControllerTest" />
-      <option name="METHOD_NAME" value="createAdvertising" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AdvertisingControllerTest.removeAdvertising" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="YCarros" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.vehicles.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.vehicles.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.vehicles.controller.AdvertisingControllerTest" />
-      <option name="METHOD_NAME" value="removeAdvertising" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CarroTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="YCarros" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.CarroTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.VehiclesControllerTest">
     <configuration name="SellsControllerTest.createSell" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="YCarros" />
       <extension name="coverage">
@@ -155,13 +93,76 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="VehiclesControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="YCarros" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vehicles.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.vehicles.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.vehicles.controller.VehiclesControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VehiclesControllerTest.createVehicle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="YCarros" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vehicles.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.vehicles.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.vehicles.controller.VehiclesControllerTest" />
+      <option name="METHOD_NAME" value="createVehicle" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VehiclesControllerTest.listByBrand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="YCarros" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vehicles.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.vehicles.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.vehicles.controller.VehiclesControllerTest" />
+      <option name="METHOD_NAME" value="listByBrand" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VehiclesControllerTest.listByPrice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="YCarros" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vehicles.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.vehicles.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.vehicles.controller.VehiclesControllerTest" />
+      <option name="METHOD_NAME" value="listByPrice" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.VehiclesControllerTest" />
+        <item itemvalue="JUnit.VehiclesControllerTest.listByPrice" />
+        <item itemvalue="JUnit.VehiclesControllerTest.listByBrand" />
+        <item itemvalue="JUnit.VehiclesControllerTest.createVehicle" />
         <item itemvalue="JUnit.SellsControllerTest.createSell" />
-        <item itemvalue="JUnit.AdvertisingControllerTest" />
-        <item itemvalue="JUnit.AdvertisingControllerTest.removeAdvertising" />
-        <item itemvalue="JUnit.AdvertisingControllerTest.createAdvertising" />
-        <item itemvalue="JUnit.CarroTest" />
       </list>
     </recent_temporary>
   </component>
@@ -186,7 +187,7 @@
       <workItem from="1671904010299" duration="28265000" />
       <workItem from="1672249557169" duration="15941000" />
       <workItem from="1672879584572" duration="9071000" />
-      <workItem from="1672945974146" duration="6265000" />
+      <workItem from="1672945974146" duration="11886000" />
     </task>
     <servers />
   </component>
