@@ -6,7 +6,6 @@ import com.vehicles.controller.VehiclesController;
 import com.vehicles.controller.SellsController;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -90,7 +89,7 @@ public class Main {
     }
 
     private void listAdvertisedVehicles(Advertiser advertiser) {
-        List<Vehicle> advertisedVehicle = advertiser.getAdvertisedVehicle();
+        List<Vehicle> advertisedVehicle = advertiser.getAdvertisedVehicles();
         System.out.println("\n---list of advertised vehicles by " + advertiser.getName() + "---");
         advertisedVehicle.forEach(k -> System.out.println("#"+k.getId() + " --> brandName: " + k.getModel().getBrand()+" | vehicleName: "+k.getModel().getName() + " | color: " + k.getColor() + " | modelYear: " + k.getModelYear() + " | manufactureYear: " + k.getManufactureYear() + " | price: " + k.getPrice() + " | mileage: " + k.getMileage()));
     }

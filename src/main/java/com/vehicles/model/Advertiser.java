@@ -6,13 +6,13 @@ import java.util.List;
 public class Advertiser extends User {
     private int amountActiveAds;
     private int amountVehiclesSold;
-    private List<Vehicle> advertisedVehicle = new ArrayList<>();
+    private List<Vehicle> advertisedVehicles = new ArrayList<>();
 
-    public Advertiser(String name, String phone, String email, int amountActiveAds, int amountVehiclesSold, List<Vehicle> advertisedVehicle) {
+    public Advertiser(String name, String phone, String email, int amountActiveAds, int amountVehiclesSold, List<Vehicle> advertisedVehicles) {
         super(name, phone, email);
         this.amountActiveAds = amountActiveAds;
         this.amountVehiclesSold = amountVehiclesSold;
-        this.advertisedVehicle = advertisedVehicle;
+        this.advertisedVehicles = advertisedVehicles;
     }
 
     public Advertiser(String name, String phone, String email, int amountActiveAds, int amountVehiclesSold) {
@@ -37,21 +37,23 @@ public class Advertiser extends User {
         this.amountVehiclesSold = amountVehiclesSold;
     }
 
-    public List<Vehicle> getAdvertisedVehicle() {
-        return advertisedVehicle;
+    public List<Vehicle> getAdvertisedVehicles() {
+        return advertisedVehicles;
     }
 
-    public void setAdvertisedVehicle(List<Vehicle> advertisedVehicle) {
-        this.advertisedVehicle = advertisedVehicle;
+    public void setAdvertisedVehicles(List<Vehicle> advertisedVehicles) {
+        this.advertisedVehicles = advertisedVehicles;
     }
 
     /*TODO Create tests for addAdvertisedCar() and removeAdvertisedCar()*/
 
     public void addAdvertisedCar(Vehicle vehicle) {
-        advertisedVehicle.add(vehicle);
+        amountActiveAds++;
+        advertisedVehicles.add(vehicle);
     }
 
     public void removeAdvertisedVehicle(Vehicle vehicle) {
-        advertisedVehicle.remove(vehicle);
+        amountActiveAds--;
+        advertisedVehicles.remove(vehicle);
     }
 }

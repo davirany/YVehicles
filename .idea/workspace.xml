@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70bcc7fd-059b-468c-8107-12bca76dff8c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/model/Buyer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/model/Buyer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/vehicles/controller/VehiclesControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vehicles/controller/VehiclesControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/controller/SellsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/controller/SellsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/model/Advertiser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/model/Advertiser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/vehicles/model/BuyerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vehicles/model/BuyerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +79,39 @@
       <recent name="com.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BuyerTest.removeBoughtVehicle">
+  <component name="RunManager" selected="JUnit.AdvertiserTest.removeAdvertisedVehicle">
+    <configuration name="AdvertiserTest.addAdvertisedCar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="YCarros" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vehicles.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.vehicles.model" />
+      <option name="MAIN_CLASS_NAME" value="com.vehicles.model.AdvertiserTest" />
+      <option name="METHOD_NAME" value="addAdvertisedCar" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdvertiserTest.removeAdvertisedVehicle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="YCarros" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vehicles.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.vehicles.model" />
+      <option name="MAIN_CLASS_NAME" value="com.vehicles.model.AdvertiserTest" />
+      <option name="METHOD_NAME" value="removeAdvertisedVehicle" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BuyerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="YCarros" />
       <extension name="coverage">
@@ -123,45 +158,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VehiclesControllerTest.listByBrand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="YCarros" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.vehicles.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.vehicles.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.vehicles.controller.VehiclesControllerTest" />
-      <option name="METHOD_NAME" value="listByBrand" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="VehiclesControllerTest.listByPrice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="YCarros" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.vehicles.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.vehicles.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.vehicles.controller.VehiclesControllerTest" />
-      <option name="METHOD_NAME" value="listByPrice" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AdvertiserTest.removeAdvertisedVehicle" />
+        <item itemvalue="JUnit.AdvertiserTest.addAdvertisedCar" />
         <item itemvalue="JUnit.BuyerTest.removeBoughtVehicle" />
         <item itemvalue="JUnit.BuyerTest" />
         <item itemvalue="JUnit.VehiclesControllerTest" />
-        <item itemvalue="JUnit.VehiclesControllerTest.listByPrice" />
-        <item itemvalue="JUnit.VehiclesControllerTest.listByBrand" />
       </list>
     </recent_temporary>
   </component>
@@ -186,7 +189,7 @@
       <workItem from="1671904010299" duration="28265000" />
       <workItem from="1672249557169" duration="15941000" />
       <workItem from="1672879584572" duration="9071000" />
-      <workItem from="1672945974146" duration="13531000" />
+      <workItem from="1672945974146" duration="14897000" />
     </task>
     <servers />
   </component>

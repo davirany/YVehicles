@@ -12,6 +12,9 @@ public class SellsController {
     }
 
     public void createSell(Sell sell) {
+        /*TODO add an increment to advertiser and buyer*/
         sells.add(sell);
     }
+
+    /*TODO create a removeSell method*/
 }

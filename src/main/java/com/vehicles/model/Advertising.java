@@ -1,8 +1,5 @@
 package com.vehicles.model;
 
-import java.util.Collections;
-import java.util.List;
-
 public class Advertising {
     private int id;
     private String description;
