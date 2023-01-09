@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="70bcc7fd-059b-468c-8107-12bca76dff8c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagram/YCarros.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/controller/VehiclesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/controller/VehiclesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/MainMenu.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/MainMenu.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/MainMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,24 +43,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/davir/IdeaProjects/YCarros/src/main/java/com/veiculos&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/davir/IdeaProjects/YCarros/src/main/java/com/veiculos/diagrama&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "359",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "full.screen.before.presentation.mode": "false",
+    "last_directory_selection": "C:/Users/davir/IdeaProjects/YCarros/src/main/java/com/veiculos",
+    "last_opened_file_path": "C:/Users/davir/IdeaProjects/YCarros/src/main/java/com/veiculos/diagrama",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.veiculos.dominio" />
@@ -79,8 +83,8 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.MainMenu">
-    <configuration name="MainMenu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.vehicles.view.MainMenu" />
+    <configuration name="CRUDVehicles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.vehicles.view.CRUDVehicles" />
       <module name="YCarros" />
       <extension name="coverage">
         <pattern>
@@ -92,18 +96,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdvertiserTest.addAdvertisedCar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainMenu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.vehicles.view.MainMenu" />
       <module name="YCarros" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.vehicles.model.*" />
+          <option name="PATTERN" value="com.vehicles.view.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.vehicles.model" />
-      <option name="MAIN_CLASS_NAME" value="com.vehicles.model.AdvertiserTest" />
-      <option name="METHOD_NAME" value="addAdvertisedCar" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -159,10 +160,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainMenu" />
+        <item itemvalue="Application.CRUDVehicles" />
         <item itemvalue="JUnit.SellsControllerTest.removeSell" />
         <item itemvalue="JUnit.SellsControllerTest.createSell" />
         <item itemvalue="JUnit.AdvertiserTest.removeAdvertisedVehicle" />
-        <item itemvalue="JUnit.AdvertiserTest.addAdvertisedCar" />
       </list>
     </recent_temporary>
   </component>
@@ -192,6 +193,7 @@
       <workItem from="1673024940400" duration="630000" />
       <workItem from="1673026218670" duration="11978000" />
       <workItem from="1673110836965" duration="1420000" />
+      <workItem from="1673204892388" duration="16694000" />
     </task>
     <servers />
   </component>

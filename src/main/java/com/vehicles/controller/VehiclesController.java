@@ -13,6 +13,8 @@ public class VehiclesController {
     }
 
     public void createVehicle(Vehicle vehicle) {
+        int randomId = (int)(Math.random()*(1500-500+1)+500);
+        vehicle.setId(randomId);
         vehicles.add(vehicle);
     }
 
