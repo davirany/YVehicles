@@ -1,29 +1,28 @@
 package com.vehicles.view;
-
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-public class MainMenu extends JFrame{
-    private JPanel MainMenuPanel;
-    private JTabbedPane tabbedPane;
-    private JPanel CRUDVehiclesPanel;
-    private JPanel CRUDAdvertisementsPanel;
-    private JPanel CRUDUsersPanel;
-    private JPanel CRUDSellsPanel;
-    private JPanel ConsultPanel;
-
+class MainMenu extends javax.swing.JFrame {
     public MainMenu() {
-        super("YCarros");
-        CRUDVehicles crudVehicles = new CRUDVehicles();
-        setSize(1100, 700);
-        setVisible(true);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        add(MainMenuPanel);
-        CRUDVehiclesPanel.add(crudVehicles);
+        initComponents();
     }
 
+    private void initComponents() {
+        JTabbedPane jTabbedPaneContainer = new JTabbedPane();
+        setTitle("YCarros");
+        setSize(600,500);
+        add(jTabbedPaneContainer);
+        jTabbedPaneContainer.setSize(550,500);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        CRUDVehicles crudVehicles = new CRUDVehicles();
+        CRUDUsers crudUsers = new CRUDUsers();
+        CRUDSell crudSell = new CRUDSell();
+        Consult consult =new Consult();
+        jTabbedPaneContainer.add("CRUDVehicles", crudVehicles);
+        jTabbedPaneContainer.add("CRUDUsers", crudUsers);
+        jTabbedPaneContainer.add("CRUDSell", crudSell);
+        jTabbedPaneContainer.add("Consult", consult);
+        setVisible(true);
+    }
     public static void main(String[] args) {
         new MainMenu();
     }
