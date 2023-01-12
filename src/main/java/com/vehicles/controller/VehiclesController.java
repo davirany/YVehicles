@@ -6,9 +6,9 @@ import java.util.List;
 import java.util.Objects;
 
 public class VehiclesController {
-    private final List<Vehicle> vehicles = new ArrayList<>();
+    private static final List<Vehicle> vehicles = new ArrayList<>();
 
-    public List<Vehicle> getVehicles() {
+    public static List<Vehicle> getVehicles() {
         return vehicles;
     }
 
