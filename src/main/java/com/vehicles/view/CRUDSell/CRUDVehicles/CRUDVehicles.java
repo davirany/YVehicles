@@ -1,7 +1,6 @@
 package com.vehicles.view.CRUDVehicles;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class CRUDVehicles extends JPanel {
     /*TODO Create this component*/

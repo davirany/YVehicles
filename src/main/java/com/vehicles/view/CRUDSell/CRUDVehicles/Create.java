@@ -14,8 +14,8 @@ public class Create extends JPanel {
 
         JLabel modelLabel = new JLabel("Model");
         add(modelLabel);
-        JTextField modelTextfield = new JTextField(12);
-        add(modelTextfield);
+        JTextField modelTextField = new JTextField(12);
+        add(modelTextField);
 
         JLabel colorLabel = new JLabel("Color");
         add(colorLabel);
