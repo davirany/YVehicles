@@ -1,15 +1,19 @@
 package com.vehicles.view.CRUDUsers;
-
 import javax.swing.*;
 
 public class CRUDUsers extends JPanel{
     /*TODO Create this component*/
     public CRUDUsers(){
-        JScrollPane scrollPane = new JScrollPane();
-        JTextArea usersTextArea = new JTextArea(10,50);
-        scrollPane.setViewportView(usersTextArea);
-        setSize(550, 500);
-        add(scrollPane);
-        add(usersTextArea);
+        setSize(800,500);
+        JTabbedPane jTabbedPaneContainer = new JTabbedPane();
+        add(jTabbedPaneContainer);
+
+        Create createUser = new Create();
+        Update updateUser = new Update();
+        Delete deleteUser = new Delete();
+
+        jTabbedPaneContainer.addTab("Create", createUser);
+        jTabbedPaneContainer.addTab("Update", updateUser);
+        jTabbedPaneContainer.addTab("Delete", deleteUser);
     }
 }

@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70bcc7fd-059b-468c-8107-12bca76dff8c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/CRUDVehicles.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagram/DSK_Synthopia_2.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/controller/VehiclesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/controller/VehiclesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/CRUDSell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDUsers/CRUDUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/Consult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/Consult/Consult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/CRUDVehicles/CRUDVehicles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/CRUDVehicles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/CRUDVehicles/Create.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/Create.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/CRUDVehicles/Delete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/Delete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/CRUDVehicles/Read.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/Read.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/CRUDVehicles/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/Update.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDUsers/CRUDUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDUsers/CRUDUsers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/MainMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,25 +46,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "359",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "full.screen.before.presentation.mode": "false",
-    "last_directory_selection": "C:/Users/davir/IdeaProjects/YCarros/src/main/java/com/veiculos",
-    "last_opened_file_path": "C:/Users/davir/IdeaProjects/YCarros/src/main/java/com/veiculos/diagrama",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.intentionPowerPack"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;359&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/davir/IdeaProjects/YCarros/src/main/java/com/veiculos&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/davir/IdeaProjects/YCarros/src/main/java/com/veiculos/diagrama&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.intentionPowerPack&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.veiculos.dominio" />
@@ -175,7 +174,6 @@
       <list>
         <item itemvalue="Application.com.vehicles.view.MainMenu" />
         <item itemvalue="Application.com.vehicles.view.MainMenu" />
-        <item itemvalue="Application.com.vehicles.view.CRUDVehicles" />
         <item itemvalue="JUnit.SellsControllerTest.removeSell" />
         <item itemvalue="JUnit.SellsControllerTest.createSell" />
       </list>
@@ -212,7 +210,9 @@
       <workItem from="1673381946627" duration="1370000" />
       <workItem from="1673455131226" duration="6136000" />
       <workItem from="1673463416443" duration="913000" />
-      <workItem from="1673478635138" duration="12333000" />
+      <workItem from="1673478635138" duration="12482000" />
+      <workItem from="1673499028832" duration="3901000" />
+      <workItem from="1673554806995" duration="5003000" />
     </task>
     <servers />
   </component>
