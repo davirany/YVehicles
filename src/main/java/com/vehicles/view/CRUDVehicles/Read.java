@@ -10,13 +10,10 @@ public class Read extends JPanel implements ActionListener {
     /*TODO implements functionalities to this screen*/
         JPanel innerWindow = new JPanel();
         JTextArea textArea = new JTextArea();
-        JButton listVehicles = new JButton("List all Vehicles");
+        JButton listVehicles = new JButton("List_All_Vehicles");
     public Read() {
         textArea.setFont(new Font("Serif", Font.ITALIC,16));
-        setLayout(new GridLayout(2,1));
-
         listVehicles.addActionListener(this);
-
         add(listVehicles);
         innerWindow.add(new JScrollBar());
         add(innerWindow);

@@ -7,7 +7,7 @@ public class Update extends JPanel {
     /*TODO implements functionalities to this screen*/
     public Update() {
         setLayout(new GridLayout(9,2));
-        JLabel idLabel = new JLabel("ID Of The Vehicle");
+        JLabel idLabel = new JLabel("ID_Of_The_Vehicle");
         add(idLabel);
         JTextField idTextField = new JTextField(3);
         add(idTextField);

@@ -5,7 +5,7 @@ import javax.swing.*;
 public class Delete extends JPanel{
     /*TODO implements functionalities to this screen*/
     public Delete() {
-        JLabel idVehicles = new JLabel("ID Of The Vehicle");
+        JLabel idVehicles = new JLabel("ID_Of_The_Vehicle");
         JTextField deleteTextField = new JTextField(4);
         JButton deleteButton = new JButton("Delete_Vehicle");
         add(idVehicles);

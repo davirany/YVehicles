@@ -6,13 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="70bcc7fd-059b-468c-8107-12bca76dff8c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/CRUDVehicles/CRUDVehicles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/CRUDVehicles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/CRUDVehicles/Create.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/Create.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/CRUDVehicles/Delete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/Delete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/CRUDVehicles/Read.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/Read.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/CRUDVehicles/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/Update.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDUsers/CRUDUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDUsers/CRUDUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/controller/SellsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/controller/SellsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/CRUDSell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/CRUDSell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/Read.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/Read.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/Update.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +209,7 @@
       <workItem from="1673463416443" duration="913000" />
       <workItem from="1673478635138" duration="12482000" />
       <workItem from="1673499028832" duration="3901000" />
-      <workItem from="1673554806995" duration="5003000" />
+      <workItem from="1673554806995" duration="8683000" />
     </task>
     <servers />
   </component>

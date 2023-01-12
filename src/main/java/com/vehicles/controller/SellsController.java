@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SellsController {
-    private final List<Sell> sells = new ArrayList<>();
+    private static final List<Sell> sells = new ArrayList<>();
 
-    public List<Sell> getSells() {
+    public static List<Sell> getSells() {
         return sells;
     }
 
