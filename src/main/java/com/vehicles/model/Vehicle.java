@@ -18,6 +18,16 @@ public class Vehicle {
         this.price = price;
         this.id = id;
     }
+
+    public Vehicle(Model model, int manufactureYear, int modelYear, String color, int mileage, int price) {
+        this.model = model;
+        this.manufactureYear = manufactureYear;
+        this.modelYear = modelYear;
+        this.color = color;
+        this.mileage = mileage;
+        this.price = price;
+    }
+
     public Model getModel() {
         return model;
     }

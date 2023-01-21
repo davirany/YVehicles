@@ -3,12 +3,10 @@ package com.vehicles.model;
 public class Brand {
     private String name;
     private String nationality;
-    private int foundedIn;
 
-    public Brand(String name, String nationality, int foundedIn) {
+    public Brand(String name, String nationality) {
         this.name = name;
         this.nationality = nationality;
-        this.foundedIn = foundedIn;
     }
 
     public String getName() {
@@ -27,11 +25,4 @@ public class Brand {
         this.nationality = nationality;
     }
 
-    public int getFoundedIn() {
-        return foundedIn;
-    }
-
-    public void setFoundedIn(int foundedIn) {
-        this.foundedIn = foundedIn;
-    }
 }

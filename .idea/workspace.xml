@@ -6,7 +6,37 @@
   <component name="ChangeListManager">
     <list default="true" id="70bcc7fd-059b-468c-8107-12bca76dff8c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/controller/VehiclesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/controller/VehiclesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/model/Brand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/model/Brand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/model/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/model/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/CRUDSell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/CRUDSell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/Create.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/Create.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/Delete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/Delete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/Read.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/Read.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/Update.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDUsers/AdvertiserCreate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDUsers/AdvertiserDelete.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDUsers/AdvertiserUpdate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDUsers/BuyerCreate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDUsers/BuyerDelete.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDUsers/BuyerUpdate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDUsers/CRUDUsers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDUsers/Create.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDUsers/Delete.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDUsers/Update.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/CRUDVehicles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/CRUDVehicles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/Create.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/Create.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/Delete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/Delete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/Read.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/Read.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/Update.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/Consult/Consult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/Consult/Consult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/vehicles/controller/AdvertisingControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vehicles/controller/AdvertisingControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/vehicles/controller/SellsControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vehicles/controller/SellsControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/vehicles/controller/VehiclesControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vehicles/controller/VehiclesControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/vehicles/model/AdvertiserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vehicles/model/AdvertiserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/vehicles/model/BuyerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vehicles/model/BuyerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +236,13 @@
       <workItem from="1673463416443" duration="913000" />
       <workItem from="1673478635138" duration="12482000" />
       <workItem from="1673499028832" duration="3901000" />
-      <workItem from="1673554806995" duration="13718000" />
+      <workItem from="1673554806995" duration="14256000" />
+      <workItem from="1674061657391" duration="1074000" />
+      <workItem from="1674068456891" duration="212000" />
+      <workItem from="1674088137870" duration="599000" />
+      <workItem from="1674163792778" duration="1625000" />
+      <workItem from="1674247288498" duration="7523000" />
+      <workItem from="1674282977193" duration="14978000" />
     </task>
     <servers />
   </component>

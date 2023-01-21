@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AdvertiserTest {
     Advertiser advertiser = new Advertiser("name", "61912345678", "name@email.com", 0, 0);
-    Brand brand = new Brand("Chevrolet", "American", 1911);
+    Brand brand = new Brand("Chevrolet", "American");
     Model model = new Model("Camaro", brand);
     Vehicle vehicle = new Vehicle(model, 2022, 2023, "Yellow", 0, 550000, 1);
 

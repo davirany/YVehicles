@@ -123,7 +123,7 @@ public class Main {
     }
 
     private Brand createBrand(String brandName, String nationality, int foundedIn) {
-        return new Brand(brandName, nationality, foundedIn);
+        return new Brand(brandName, nationality);
     }
 
     private Model createModel(String modelName, Brand brand) {

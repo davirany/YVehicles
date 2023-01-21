@@ -12,7 +12,7 @@ class SellsControllerTest {
     @Test
     void createSell() {
         Advertiser advertiser = new Advertiser("name", "61912345678", "name@email.com", 1, 0);
-        Brand brand = new Brand("Chevrolet", "American", 1911);
+        Brand brand = new Brand("Chevrolet", "American");
         Model model = new Model("Camaro", brand);
         Vehicle vehicle = new Vehicle(model, 2022, 2023, "Yellow", 0, 550000, 1);
         Advertising advertising = new Advertising(1, "description", advertiser, vehicle);
@@ -29,7 +29,7 @@ class SellsControllerTest {
     @Test
     void removeSell() {
         Advertiser advertiser = new Advertiser("name", "61912345678", "name@email.com", 1, 0);
-        Brand brand = new Brand("Chevrolet", "American", 1911);
+        Brand brand = new Brand("Chevrolet", "American");
         Model model = new Model("Camaro", brand);
         Vehicle vehicle = new Vehicle(model, 2022, 2023, "Yellow", 0, 550000, 1);
         Advertising advertising = new Advertising(1, "description", advertiser, vehicle);
