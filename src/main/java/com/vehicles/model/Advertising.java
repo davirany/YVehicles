@@ -7,7 +7,6 @@ public class Advertising {
     private Vehicle vehicle;
 
     public Advertising(String description, Advertiser advertiser, Vehicle vehicle) {
-        this.id = id;
         this.description = description;
         this.advertiser = advertiser;
         this.vehicle = vehicle;

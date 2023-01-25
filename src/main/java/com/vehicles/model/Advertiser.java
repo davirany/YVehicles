@@ -8,13 +8,6 @@ public class Advertiser extends User {
     private int amountVehiclesSold;
     private List<Vehicle> advertisedVehicles = new ArrayList<>();
 
-    public Advertiser(String name, String phone, String email, int amountActiveAds, int amountVehiclesSold, List<Vehicle> advertisedVehicles) {
-        super(name, phone, email);
-        this.amountActiveAds = amountActiveAds;
-        this.amountVehiclesSold = amountVehiclesSold;
-        this.advertisedVehicles = advertisedVehicles;
-    }
-
     public Advertiser(String name, String phone, String email, int amountActiveAds, int amountVehiclesSold) {
         super(name, phone, email);
         this.amountActiveAds = amountActiveAds;
@@ -44,8 +37,6 @@ public class Advertiser extends User {
     public void setAdvertisedVehicles(List<Vehicle> advertisedVehicles) {
         this.advertisedVehicles = advertisedVehicles;
     }
-
-    /*TODO Create tests for addAdvertisedCar() and removeAdvertisedCar()*/
 
     public void addAdvertisedCar(Vehicle vehicle) {
         amountActiveAds++;

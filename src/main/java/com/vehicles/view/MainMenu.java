@@ -11,10 +11,9 @@ import java.util.List;
 public class MainMenu {
     VehiclesController vehiclesController = new VehiclesController();
     SellsController sellsController = new SellsController();
-    AdvertisingController advertisingController = new AdvertisingController();
 
     //MainMenu ->
-    JFrame mainMenu = new JFrame("YCarros");
+    JFrame mainMenu = new JFrame("Y_Vehicles");
     JTabbedPane jTabbedPaneContainer = new JTabbedPane();
     //End Of MainMenu
 
@@ -561,6 +560,7 @@ public class MainMenu {
         List<Vehicle> listedByBrand = vehiclesController.listByBrand(consultBrandTextField.getText());
         listedByBrand.forEach(vehicle -> consultTextArea.append("#"+vehicle.getId() + " --> brandName: " + vehicle.getModel().getBrand()+" | vehicleName: "+vehicle.getModel().getName() + "\n"));
     }
+
     public static void main(String[] args) {
         new MainMenu();
     }

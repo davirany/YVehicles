@@ -8,9 +8,7 @@ public class Sell {
 
     public Sell(Advertising advertising, Buyer buyer) {
         this.advertising = advertising;
-        this.date = date;
         this.buyer = buyer;
-        this.id = id;
     }
 
     public String getDate() {

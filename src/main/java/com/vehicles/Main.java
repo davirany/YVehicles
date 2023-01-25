@@ -1,7 +1,6 @@
 package com.vehicles;
 
 import com.vehicles.model.*;
-import com.vehicles.controller.AdvertisingController;
 import com.vehicles.controller.VehiclesController;
 import com.vehicles.controller.SellsController;
 import com.vehicles.view.MainMenu;
