@@ -203,7 +203,7 @@ public class MainMenu {
 
     //Consult ->
     JPanel consultInnerWindow = new JPanel();
-    JTextArea consultTextArea = new JTextArea();
+    JTextArea consultTextArea = new JTextArea(6,40);
     JButton listVehiclesByPrice = new JButton("List_By_Price");
     JButton listVehiclesByBrand = new JButton("List_By_Brand");
     JPanel listByPrice = new JPanel();
@@ -433,8 +433,8 @@ public class MainMenu {
         consultPanel.add(listByBrand);
 
         consultTextArea.setFont(new Font("Serif", Font.ITALIC,16));
-        /*listVehiclesByPrice.addActionListener(this);
-        listVehiclesByBrand.addActionListener(this);*/
+        listVehiclesByPrice.addActionListener(this::listByPrice);
+        listVehiclesByBrand.addActionListener(this::listByBrand);
         listByPrice.add(listVehiclesByPrice);
         listByBrand.add(listVehiclesByBrand);
         consultInnerWindow.add(new JScrollBar());
@@ -460,13 +460,13 @@ public class MainMenu {
 
     private void readVehicles(ActionEvent actionEvent) {
         readVehiclesTextArea.setText("");
-        List<Vehicle> vehicles = vehiclesController.getVehicles();
+        List<Vehicle> vehicles = VehiclesController.getVehicles();
         vehicles.forEach(vehicle -> readVehiclesTextArea.append("#"+vehicle.getId() + " --> brandName: " + vehicle.getModel().getBrand()+" | vehicleName: "+vehicle.getModel().getName() + "\n"));
     }
 
 
     private void updateVehicle(ActionEvent actionEvent) {
-        List<Vehicle> vehicles = vehiclesController.getVehicles();
+        List<Vehicle> vehicles = VehiclesController.getVehicles();
         vehicles.forEach( vehicle -> {
             if (vehicle.getId() == Integer.parseInt(updateVehicleIdTextField.getText())) {
                 Brand newBrand = new Brand(updateVehicleBrandTextField.getText(), updateVehicleNationalityTextField.getText());
@@ -484,7 +484,7 @@ public class MainMenu {
     }
 
     private void deleteVehicle (ActionEvent actionEvent) {
-        List<Vehicle> vehicles = vehiclesController.getVehicles();
+        List<Vehicle> vehicles = VehiclesController.getVehicles();
         vehicles.forEach(vehicle -> {
             if (vehicle.getId() == Integer.parseInt(deleteVehiclesTextField.getText())) {
                 vehiclesController.removeVehicle(vehicle);
@@ -494,7 +494,7 @@ public class MainMenu {
         });
     }
     private void createSell(ActionEvent actionEvent) {
-        List<Vehicle> vehicles = vehiclesController.getVehicles();
+        List<Vehicle> vehicles = VehiclesController.getVehicles();
         vehicles.forEach(vehicle -> {
             if (vehicle.getId() == Integer.parseInt(createSellVehicleIdTextField.getText())) {
                 Advertiser advertiser = new Advertiser(createAdvertiserNameTextField.getText(), createAdvertiserPhoneTextField.getText(), createAdvertiserEmailTextField.getName(), Integer.parseInt(createAdvertiserActiveAdsTextField.getText()), Integer.parseInt(createAdvertiserVehiclesSoldTextField.getText()));
@@ -508,13 +508,11 @@ public class MainMenu {
     }
     private void readSells (ActionEvent actionEvent){
         readSellsTextArea.setText("");
-        List<Sell> sells = sellsController.getSells();
-        sells.forEach(sell -> {
-            readSellsTextArea.append("#" + sell.getId() + " --> vehicleId: " + sell.getAdvertising().getVehicle().getId() + " | advertiserName: " + sell.getAdvertising().getAdvertiser().getName() + " | buyerName: " + sell.getBuyer().getName() + " | dateOfTheSell: " + sell.getDate() + "\n");
-        });
+        List<Sell> sells = SellsController.getSells();
+        sells.forEach(sell -> readSellsTextArea.append("#" + sell.getId() + " --> vehicleId: " + sell.getAdvertising().getVehicle().getId() + " | advertiserName: " + sell.getAdvertising().getAdvertiser().getName() + " | buyerName: " + sell.getBuyer().getName() + " | dateOfTheSell: " + sell.getDate() + "\n"));
     }
     private void updateSell(ActionEvent actionEvent) {
-    List<Sell> sells = sellsController.getSells();
+    List<Sell> sells = SellsController.getSells();
     sells.forEach(sell -> {
         if (sell.getAdvertising().getVehicle().getId() == Integer.parseInt(updateSellVehicleIdTextField.getText())) {
             Advertising updatedAdvertising = sell.getAdvertising();
@@ -543,7 +541,7 @@ public class MainMenu {
     });
     }
     private void deleteSell(ActionEvent actionEvent) {
-        List<Sell> sells = sellsController.getSells();
+        List<Sell> sells = SellsController.getSells();
         sells.forEach(sell -> {
             if (sell.getId() == Integer.parseInt(deleteSellTextField.getText())) {
             sellsController.removeSell(sell);
@@ -552,7 +550,17 @@ public class MainMenu {
         JOptionPane.showMessageDialog(null,"Sell_Deleted!");
     }
 
-    /*TODO implement consult*/
+    private void listByPrice(ActionEvent actionEvent) {
+        consultTextArea.setText("________________________List_By_Price________________________\n");
+        List<Vehicle> listedByPrice = vehiclesController.listByPrice(Integer.parseInt(minorPriceTextField.getText()), Integer.parseInt(majorPriceTextField.getText()));
+        listedByPrice.forEach(vehicle -> consultTextArea.append("#"+vehicle.getId() + " --> brandName: " + vehicle.getModel().getBrand()+" | vehicleName: "+vehicle.getModel().getName() + "\n"));
+    }
+
+    private void listByBrand(ActionEvent actionEvent) {
+        consultTextArea.setText("________________________List_By_Brand________________________\n");
+        List<Vehicle> listedByBrand = vehiclesController.listByBrand(consultBrandTextField.getText());
+        listedByBrand.forEach(vehicle -> consultTextArea.append("#"+vehicle.getId() + " --> brandName: " + vehicle.getModel().getBrand()+" | vehicleName: "+vehicle.getModel().getName() + "\n"));
+    }
     public static void main(String[] args) {
         new MainMenu();
     }
