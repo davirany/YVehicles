@@ -1,52 +1,238 @@
 package com.vehicles.view;
 
 import com.vehicles.controller.*;
+import com.vehicles.model.Brand;
+import com.vehicles.model.Model;
+import com.vehicles.model.Vehicle;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.util.List;
 
-class MainMenu extends javax.swing.JFrame {
+public class MainMenu {
     VehiclesController vehiclesController = new VehiclesController();
     SellsController sellsController = new SellsController();
     AdvertisingController advertisingController = new AdvertisingController();
+
+    //MainMenu ->
+    JFrame mainMenu = new JFrame("YCarros");
+    JTabbedPane jTabbedPaneContainer = new JTabbedPane();
+    //End Of MainMenu
+
+    //crudVehicles ->
+    JPanel crudVehicles = new JPanel();
+    JTabbedPane crudVehiclesJTabbedPane = new JTabbedPane();
+
+    //CreateVehicles ->
+    JButton createSell = new JButton("Create_Sell");
+    JPanel createSellButtonPanel = new JPanel();
+
+    JLabel brandLabel = new JLabel("Brand");
+    JTextField brandTextField = new JTextField(12);
+    JLabel brandNationalityLabel = new JLabel("Nationality");
+    JTextField brandNationalityTextField = new JTextField(12);
+    JLabel modelLabel = new JLabel("Model");
+    JTextField modelTextField = new JTextField(12);
+    JLabel colorLabel = new JLabel("Color");
+    JTextField colorTextField = new JTextField(12);
+    JLabel mileageLabel = new JLabel("Mileage");
+    JTextField mileageTextField = new JTextField(12);
+    JLabel manuYearLabel = new JLabel("Manufacture_Year");
+    JTextField manuYearTextField = new JTextField(4);
+    JLabel modelYearLabel = new JLabel("Model_Year");
+    JTextField modelYearTextField = new JTextField(4);
+    JLabel priceLabel = new JLabel("Price");
+    JTextField priceTextField = new JTextField(12);
+    JButton createVehicleButton = new JButton("Create_Vehicle");
+
+    JPanel createVehicle = new JPanel();
+    //End Of CreateVehicles
+
+    //ReadVehicles ->
+    JPanel readVehiclesPanel = new JPanel();
+    JTextArea readVehiclesTextArea = new JTextArea(10,30);
+    JButton listAllVehicles = new JButton("List_All_Vehicles");
+    JScrollPane readVehiclesScrollPane = new JScrollPane(readVehiclesTextArea,JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+
+    JPanel readVehicles = new JPanel();
+    //End Of ReadVehicles
+
+    //UpdateVehicles ->
+    JLabel updateVehicleIdLabel = new JLabel("ID_Of_The_Vehicle");
+    JTextField updateVehicleIdTextField = new JTextField(3);
+    JLabel updateVehicleBrandLabel = new JLabel("Brand");
+    JTextField updateVehicleBrandTextField = new JTextField(12);
+    JLabel updateVehicleNationalityLabel = new JLabel("Nationality");
+    JTextField updateVehicleNationalityTextField = new JTextField(12);
+    JLabel updateVehicleModelLabel = new JLabel("Model");
+    JTextField updateVehicleModelTextField = new JTextField(12);
+    JLabel updateVehicleColorLabel = new JLabel("Color");
+    JTextField updateVehicleColorTextField = new JTextField(12);
+    JLabel updateVehicleMileageLabel = new JLabel("Mileage");
+    JTextField updateVehicleMileageTextField = new JTextField(12);
+    JLabel updateVehicleManuYearLabel = new JLabel("Manufacture_Year");
+    JTextField updateVehicleManuYearTextField = new JTextField(4);
+    JLabel updateVehicleModelYearLabel = new JLabel("Model_Year");
+    JTextField updateVehicleModelYearTextField = new JTextField(4);
+    JLabel updateVehiclePriceLabel = new JLabel("Price");
+    JTextField updateVehiclePriceTextField = new JTextField(12);
+    JButton updateVehicle = new JButton("Update_Vehicle");
+
+    JPanel updateVehicles = new JPanel();
+    //End Of UpdateVehicles
+
+    //DeleteVehicles ->
+    JLabel deleteVehiclesIdVehicles = new JLabel("ID_Of_The_Vehicle");
+    JTextField deleteVehiclesTextField = new JTextField(4);
+    JButton deleteVehiclesButton = new JButton("Delete_Vehicle");
+
+    JPanel deleteVehicles = new JPanel();
+    //End Of DeleteVehicles
+    //End Of crudVehicles
+
+    //crudSells ->
+    JPanel crudSellPanel = new JPanel();
+    //CreateSell ->
+    JTabbedPane crudSellJTabbedPaneContainer = new JTabbedPane();
+
+    JPanel createSellPanel = new JPanel();
+
+    //CreateAdvertiser
+    JLabel createAdvertiserNameLabel = new JLabel("Advertiser_Name");
+    JTextField createAdvertiserNameTextField = new JTextField(12);
+    JLabel createAdvertiserPhoneLabel = new JLabel("Advertiser_Phone");
+    JTextField createAdvertiserPhoneTextField = new JTextField(12);
+    JLabel createAdvertiserEmailLabel = new JLabel("Advertiser_Email");
+    JTextField createAdvertiserEmailTextField = new JTextField(12);
+    JLabel createAdvertiserActiveAdsLabel = new JLabel("Advertiser_ActiveAds");
+    JTextField createAdvertiserActiveAdsTextField = new JTextField(12);
+    JLabel createAdvertiserVehiclesSoldLabel = new JLabel("Advertiser_Vehicles_Sold");
+    JTextField createAdvertiserVehiclesSoldTextField = new JTextField(12);
+
+    JPanel createAdvertiserPanel = new JPanel();
+    //End Of CreateAdvertiser
+
+    //CreateBuyer->
+    JLabel createBuyerNameLabel = new JLabel("Buyer_Name");
+    JTextField createBuyerNameTextField = new JTextField(12);
+    JLabel createBuyerPhoneLabel = new JLabel("Buyer_Phone");
+    JTextField createBuyerPhoneTextField = new JTextField(12);
+    JLabel createBuyerEmailLabel = new JLabel("Buyer_Email");
+    JTextField createBuyerEmailTextField = new JTextField(12);
+    JLabel createBuyerVehiclesBoughtLabel = new JLabel("Buyer_Vehicles_Bought");
+    JTextField createBuyerVehiclesBoughtTextField = new JTextField(12);
+
+    JPanel createBuyerPanel = new JPanel();
+    //End Of CreateBuyer
+
+    //VehicleSell ->
+    JLabel createSellVehicleIdLabel = new JLabel("Vehicle_ID");
+    JTextField createSellVehicleIdTextField = new JTextField(12);
+
+    JPanel createVehiclePanel = new JPanel();
+    //End Of VehicleSell
+    //End Of CreateSell
+
+    //ReadSell ->
+    JPanel readSellsInnerWindow = new JPanel();
+    JTextArea textArea = new JTextArea();
+    JButton listSells = new JButton("List_All_Sells");
+
+    JPanel readSellsPanel = new JPanel();
+    //End Of ReadSell
+
+    //UpdateSell ->
+    JPanel updateSellPanel = new JPanel();
+    //End Of UpdateSell
+
+    //UpdateAdvertiser ->
+    JLabel updateAdvertiserNameLabel = new JLabel("Advertiser_Name");
+    JTextField updateAdvertiserNameTextField = new JTextField(12);
+    JLabel updateAdvertiserPhoneLabel = new JLabel("Advertiser_Phone");
+    JTextField updateAdvertiserPhoneTextField = new JTextField(12);
+    JLabel updateAdvertiserEmailLabel = new JLabel("Advertiser_Email");
+    JTextField updateAdvertiserEmailTextField = new JTextField(12);
+    JLabel updateAdvertiserActiveAdsLabel = new JLabel("Advertiser_ActiveAds");
+    JTextField updateAdvertiserActiveAdsTextField = new JTextField(12);
+    JLabel updateAdvertiserVehiclesSoldLabel = new JLabel("Advertiser_Vehicles_Sold");
+    JTextField updateAdvertiserVehiclesSoldTextField = new JTextField(12);
+
+    JPanel updateAdvertiserPanel = new JPanel();
+    //End Of UpdateAdvertiser
+
+    //UpdateBuyer ->
+    JLabel updateBuyerNameLabel = new JLabel("Buyer_Name");
+    JTextField updateBuyerNameTextField = new JTextField(12);
+    JLabel updateBuyerPhoneLabel = new JLabel("Buyer_Phone");
+    JTextField updateBuyerPhoneTextField = new JTextField(12);
+    JLabel updateBuyerEmailLabel = new JLabel("Buyer_Email");
+    JTextField updateBuyerEmailTextField = new JTextField(12);
+    JLabel updateBuyerVehiclesBoughtLabel = new JLabel("Buyer_Vehicles_Bought");
+    JTextField updateBuyerVehiclesBoughtTextField = new JTextField(12);
+
+    JPanel updateBuyerPanel = new JPanel();
+    //End Of UpdateAdvertiser
+
+    //UpdateVehicleButton ->
+    //End Of UpdateVehicleButton
+
+    JLabel updateSellVehicleIdLabel = new JLabel("Vehicle_ID");
+    JTextField updateSellVehicleIdTextField = new JTextField(12);
+
+    JPanel updateVehiclePanel = new JPanel();
+
+    //UpdateSellDate ->
+    JPanel updateSellDatePanel = new JPanel();
+    JLabel updateSellDateLabel = new JLabel("Sell_Date");
+    JTextField updateSellDateTextField = new JTextField(12);
+    //End Of UpdateSellDate
+
+    //UpdateSellButton
+    JButton updateSell = new JButton("Update_Sell");
+
+    JPanel updateSellButtonPanel = new JPanel();
+    //End Of UpdateSellButton
+
+    //DeleteSell
+    JLabel deleteSellIdSell = new JLabel("ID_Of_The_Sell");
+    JTextField deleteSellTextField = new JTextField(4);
+    JButton deleteSellButton = new JButton("Delete_sell");
+
+    JPanel deleteSellPanel = new JPanel();
+    //End Of DeleteSell
+    //End Of crudSells
+
+    //Consult ->
+    JPanel consultInnerWindow = new JPanel();
+    JTextArea consultTextArea = new JTextArea();
+    JButton listVehiclesByPrice = new JButton("List_By_Price");
+    JButton listVehiclesByBrand = new JButton("List_By_Brand");
+    JPanel listByPrice = new JPanel();
+    JPanel listByBrand = new JPanel();
+    JLabel minorPriceLabel = new JLabel("Minor_Price");
+    JTextField minorPriceTextField = new JTextField(12);
+    JLabel majorPriceLabel = new JLabel("Major_Price");
+    JTextField majorPriceTextField = new JTextField(12);
+    JLabel consultBrandLabel = new JLabel("Brand");
+    JTextField consultBrandTextField = new JTextField(12);
+
+    JPanel consultPanel = new JPanel();
+    //End Of Consult
     public MainMenu() {
         initComponents();
     }
 
-    private void initComponents() {
-        JTabbedPane jTabbedPaneContainer = new JTabbedPane();
-        setTitle("YCarros");
-        setSize(800,500);
-        add(jTabbedPaneContainer);
-        setLocationRelativeTo(null);
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+    public void initComponents() {
+        mainMenu.setSize(800,500);
+        mainMenu.add(jTabbedPaneContainer);
+        mainMenu.setLocationRelativeTo(null);
+        mainMenu.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         //CRUDVehicles ->
-        JPanel crudVehicles = new JPanel();
-        setSize(800,500);
-        JTabbedPane crudVehiclesJTabbedPane = new JTabbedPane();
         crudVehicles.add(crudVehiclesJTabbedPane);
 
         //CreateVehicle ->
-        JLabel brandLabel = new JLabel("Brand");
-        JTextField brandTextField = new JTextField(12);
-        JLabel brandNationalityLabel = new JLabel("Nationality");
-        JTextField brandNationalityTextField = new JTextField(12);
-        JLabel modelLabel = new JLabel("Model");
-        JTextField modelTextField = new JTextField(12);
-        JLabel colorLabel = new JLabel("Color");
-        JTextField colorTextField = new JTextField(12);
-        JLabel mileageLabel = new JLabel("Mileage");
-        JTextField mileageTextField = new JTextField(12);
-        JLabel manuYearLabel = new JLabel("Manufacture_Year");
-        JTextField manuYearTextField = new JTextField(4);
-        JLabel modelYearLabel = new JLabel("Model_Year");
-        JTextField modelYearTextField = new JTextField(4);
-        JLabel priceLabel = new JLabel("Price");
-        JTextField priceTextField = new JTextField(12);
-        JButton createVehicleButton = new JButton("Create_Vehicle");
-
-        JPanel createVehicle = new JPanel();
-
         createVehicle.setLayout(new GridLayout(9, 2));
         createVehicle.add(brandLabel);
         createVehicle.add(brandTextField);
@@ -65,48 +251,20 @@ class MainMenu extends javax.swing.JFrame {
         createVehicle.add(priceLabel);
         createVehicle.add(priceTextField);
         createVehicle.add(createVehicleButton);
-        /*createVehicleButton.addActionListener();*/
+        createVehicleButton.addActionListener(this::createVehicle);
         //End Of CreateVehicle
 
         //ReadVehicles ->
-        JPanel readVehiclesPanel = new JPanel();
-        JTextArea readVehiclesTextArea = new JTextArea();
-        JButton listAllVehicles = new JButton("List_All_Vehicles");
-
-        JPanel readVehicles = new JPanel();
-
         readVehiclesTextArea.setFont(new Font("Serif", Font.ITALIC,16));
         readVehicles.add(listAllVehicles);
-        readVehiclesPanel.add(new JScrollBar());
+        readVehicles.add(readVehiclesScrollPane);
         readVehicles.add(readVehiclesPanel);
-        readVehiclesTextArea.setSize(300,300);
+        readVehiclesTextArea.setBounds(0,0,300,300);
         readVehiclesPanel.add(readVehiclesTextArea);
-        /*listAllVehicles.addActionListener();*/
+        listAllVehicles.addActionListener(this::readVehicles);
         //End Of ReadVehicles
 
         //Update Vehicles ->
-        JLabel updateVehicleIdLabel = new JLabel("ID_Of_The_Vehicle");
-        JTextField updateVehicleIdTextField = new JTextField(3);
-        JLabel updateVehicleBrandLabel = new JLabel("Brand");
-        JTextField updateVehicleBrandTextField = new JTextField(12);
-        JLabel updateVehicleNationalityLabel = new JLabel("Nationality");
-        JTextField updateVehicleNationalityTextField = new JTextField(12);
-        JLabel updateVehicleModelLabel = new JLabel("Model");
-        JTextField updateVehicleModelTextField = new JTextField(12);
-        JLabel updateVehicleColorLabel = new JLabel("Color");
-        JTextField updateVehicleColorTextField = new JTextField(12);
-        JLabel updateVehicleMileageLabel = new JLabel("Mileage");
-        JTextField updateVehicleMileageTextField = new JTextField(12);
-        JLabel updateVehicleManuYearLabel = new JLabel("Manufacture_Year");
-        JTextField updateVehicleManuYearTextField = new JTextField(4);
-        JLabel updateVehicleModelYearLabel = new JLabel("Model_Year");
-        JTextField updateVehicleModelYearTextField = new JTextField(4);
-        JLabel updateVehiclePriceLabel = new JLabel("Price");
-        JTextField updateVehiclePriceTextField = new JTextField(12);
-        JButton updateVehicle = new JButton("Update_Vehicle");
-
-        JPanel updateVehicles = new JPanel();
-
         updateVehicles.setLayout(new GridLayout(10,2));
 
         updateVehicles.add(updateVehicleIdLabel);
@@ -128,19 +286,14 @@ class MainMenu extends javax.swing.JFrame {
         updateVehicles.add(updateVehiclePriceLabel);
         updateVehicles.add(updateVehiclePriceTextField);
         updateVehicles.add(updateVehicle);
-        /*updateVehicle.addActionListener();*/
+        updateVehicle.addActionListener(this::updateVehicle);
         //End Of Update Vehicles
 
         //Delete Vehicles ->
-        JLabel deleteVehiclesIdVehicles = new JLabel("ID_Of_The_Vehicle");
-        JTextField deleteVehiclesTextField = new JTextField(4);
-        JButton deleteVehiclesButton = new JButton("Delete_Vehicle");
-
-        JPanel deleteVehicles = new JPanel();
-
         deleteVehicles.add(deleteVehiclesIdVehicles);
         deleteVehicles.add(deleteVehiclesTextField);
         deleteVehicles.add(deleteVehiclesButton);
+        deleteVehiclesButton.addActionListener(this::deleteVehicle);
         //End Of Delete Vehicles
 
         crudVehiclesJTabbedPane.addTab("Create", createVehicle);
@@ -150,28 +303,11 @@ class MainMenu extends javax.swing.JFrame {
         //End Of CRUDVehicles
 
         //CRUDSell ->
-        JPanel crudSellPanel = new JPanel();
         crudSellPanel.setSize(800,500);
         //Create Sell ->
-        JTabbedPane crudSellJTabbedPaneContainer = new JTabbedPane();
         crudSellPanel.add(crudSellJTabbedPaneContainer);
-
-        JPanel createSellPanel = new JPanel();
         createSellPanel.setLayout(new GridLayout(2,2));
         //Create Advertiser ->
-        JLabel createAdvertiserNameLabel = new JLabel("Advertiser_Name");
-        JTextField createAdvertiserNameTextField = new JTextField(12);
-        JLabel createAdvertiserPhoneLabel = new JLabel("Advertiser_Phone");
-        JTextField createAdvertiserPhoneTextField = new JTextField(12);
-        JLabel createAdvertiserEmailLabel = new JLabel("Advertiser_Email");
-        JTextField createAdvertiserEmailTextField = new JTextField(12);
-        JLabel createAdvertiserActiveAdsLabel = new JLabel("Advertiser_ActiveAds");
-        JTextField createAdvertiserActiveAdsTextField = new JTextField(12);
-        JLabel createAdvertiserVehiclesSoldLabel = new JLabel("Advertiser_Vehicles_Sold");
-        JTextField createAdvertiserVehiclesSoldTextField = new JTextField(12);
-
-        JPanel createAdvertiserPanel = new JPanel();
-
         createAdvertiserPanel.setLayout(new GridLayout(6,2));
         createAdvertiserPanel.add(createAdvertiserNameLabel);
         createAdvertiserPanel.add(createAdvertiserNameTextField);
@@ -186,17 +322,6 @@ class MainMenu extends javax.swing.JFrame {
         //End Of Create Advertiser
 
         //Create Buyer ->
-        JLabel createBuyerNameLabel = new JLabel("Buyer_Name");
-        JTextField createBuyerNameTextField = new JTextField(12);
-        JLabel createBuyerPhoneLabel = new JLabel("Buyer_Phone");
-        JTextField createBuyerPhoneTextField = new JTextField(12);
-        JLabel createBuyerEmailLabel = new JLabel("Buyer_Email");
-        JTextField createBuyerEmailTextField = new JTextField(12);
-        JLabel createBuyerVehiclesBoughtLabel = new JLabel("Buyer_Vehicles_Bought");
-        JTextField createBuyerVehiclesBoughtTextField = new JTextField(12);
-
-        JPanel createBuyerPanel = new JPanel();
-
         createBuyerPanel.setLayout(new GridLayout(5,2));
         createBuyerPanel.add(createBuyerNameLabel);
         createBuyerPanel.add(createBuyerNameTextField);
@@ -209,20 +334,11 @@ class MainMenu extends javax.swing.JFrame {
         //End Of Create Buyer
 
         //Create Sell Vehicle ->
-        JLabel createSellVehicleIdLabel = new JLabel("Vehicle_ID");
-        JTextField createSellVehicleIdTextField = new JTextField(12);
-
-        JPanel createVehiclePanel = new JPanel();
-
         createVehiclePanel.add(createSellVehicleIdLabel);
         createVehiclePanel.add(createSellVehicleIdTextField);
         //End Of Create Sell Vehicle
 
         //Create Sell Button ->
-        JButton createSell = new JButton("Create_Sell");
-
-        JPanel createSellButtonPanel = new JPanel();
-
         createSellButtonPanel.add(createSell);
         //End Of Create Sell Button
         createSellPanel.add(createAdvertiserPanel);
@@ -232,12 +348,6 @@ class MainMenu extends javax.swing.JFrame {
         //End Of Create Sell
 
         //Read Vehicles ->
-        JPanel readSellsInnerWindow = new JPanel();
-        JTextArea textArea = new JTextArea();
-        JButton listSells = new JButton("List_All_Sells");
-
-        JPanel readSellsPanel = new JPanel();
-
         textArea.setFont(new Font("Serif", Font.ITALIC,16));
         readSellsPanel.add(listSells);
         readSellsInnerWindow.add(new JScrollBar());
@@ -247,23 +357,9 @@ class MainMenu extends javax.swing.JFrame {
         //End Of Read Vehicles
 
         //Update Sell ->
-        JPanel updateSellPanel = new JPanel();
         updateSellPanel.setLayout(new GridLayout(3,2));
 
         //Update Advertiser ->
-        JLabel updateAdvertiserNameLabel = new JLabel("Advertiser_Name");
-        JTextField updateAdvertiserNameTextField = new JTextField(12);
-        JLabel updateAdvertiserPhoneLabel = new JLabel("Advertiser_Phone");
-        JTextField updateAdvertiserPhoneTextField = new JTextField(12);
-        JLabel updateAdvertiserEmailLabel = new JLabel("Advertiser_Email");
-        JTextField updateAdvertiserEmailTextField = new JTextField(12);
-        JLabel updateAdvertiserActiveAdsLabel = new JLabel("Advertiser_ActiveAds");
-        JTextField updateAdvertiserActiveAdsTextField = new JTextField(12);
-        JLabel updateAdvertiserVehiclesSoldLabel = new JLabel("Advertiser_Vehicles_Sold");
-        JTextField updateAdvertiserVehiclesSoldTextField = new JTextField(12);
-
-        JPanel updateAdvertiserPanel = new JPanel();
-
         updateAdvertiserPanel.setLayout(new GridLayout(6,2));
         updateAdvertiserPanel.add(updateAdvertiserNameLabel);
         updateAdvertiserPanel.add(updateAdvertiserNameTextField);
@@ -278,17 +374,6 @@ class MainMenu extends javax.swing.JFrame {
         //End Of Update Advertiser
 
         //Update Buyer ->
-        JLabel updateBuyerNameLabel = new JLabel("Buyer_Name");
-        JTextField updateBuyerNameTextField = new JTextField(12);
-        JLabel updateBuyerPhoneLabel = new JLabel("Buyer_Phone");
-        JTextField updateBuyerPhoneTextField = new JTextField(12);
-        JLabel updateBuyerEmailLabel = new JLabel("Buyer_Email");
-        JTextField updateBuyerEmailTextField = new JTextField(12);
-        JLabel updateBuyerVehiclesBoughtLabel = new JLabel("Buyer_Vehicles_Bought");
-        JTextField updateBuyerVehiclesBoughtTextField = new JTextField(12);
-
-        JPanel updateBuyerPanel = new JPanel();
-
         updateBuyerPanel.setLayout(new GridLayout(5,2));
         updateBuyerPanel.add(updateBuyerNameLabel);
         updateBuyerPanel.add(updateBuyerNameTextField);
@@ -301,29 +386,16 @@ class MainMenu extends javax.swing.JFrame {
         //End Of Update Buyer
 
         //Update Vehicle ->
-        JLabel updateSellVehicleIdLabel = new JLabel("Vehicle_ID");
-        JTextField updateSellVehicleIdTextField = new JTextField(12);
-
-        JPanel updateVehiclePanel = new JPanel();
-
         updateVehiclePanel.add(updateSellVehicleIdLabel);
         updateVehiclePanel.add(updateSellVehicleIdTextField);
         //End Of Update Vehicle
 
         //Update Sell Date ->
-        JPanel updateSellDatePanel = new JPanel();
-        JLabel updateSellDateLabel = new JLabel("Sell_Date");
-        JTextField updateSellDateTextField = new JTextField(12);
-
         updateSellDatePanel.add(updateSellDateLabel);
         updateSellDatePanel.add(updateSellDateTextField);
         //End Of Update Sell Date
 
         //Update Sell Button ->
-        JButton updateSell = new JButton("Update_Sell");
-
-        JPanel updateSellButtonPanel = new JPanel();
-
         updateSellButtonPanel.add(updateSell);
         //End Of Update Sell Button
 
@@ -335,12 +407,6 @@ class MainMenu extends javax.swing.JFrame {
         //End Of Update Sell
 
         //Delete Sell ->
-        JLabel deleteSellIdSell = new JLabel("ID_Of_The_Sell");
-        JTextField deleteSellTextField = new JTextField(4);
-        JButton deleteSellButton = new JButton("Delete_sell");
-
-        JPanel deleteSellPanel = new JPanel();
-
         deleteSellPanel.add(deleteSellIdSell);
         deleteSellPanel.add(deleteSellTextField);
         deleteSellPanel.add(deleteSellButton);
@@ -354,21 +420,6 @@ class MainMenu extends javax.swing.JFrame {
         //End Of CRUDSell
 
         //Consult ->
-        JPanel consultInnerWindow = new JPanel();
-        JTextArea consultTextArea = new JTextArea();
-        JButton listVehiclesByPrice = new JButton("List_By_Price");
-        JButton listVehiclesByBrand = new JButton("List_By_Brand");
-        JPanel listByPrice = new JPanel();
-        JPanel listByBrand = new JPanel();
-        JLabel minorPriceLabel = new JLabel("Minor_Price");
-        JTextField minorPriceTextField = new JTextField(12);
-        JLabel majorPriceLabel = new JLabel("Major_Price");
-        JTextField majorPriceTextField = new JTextField(12);
-        JLabel consultBrandLabel = new JLabel("Brand");
-        JTextField consultBrandTextField = new JTextField(12);
-
-        JPanel consultPanel = new JPanel();
-
         consultPanel.setLayout(new GridLayout(3,1));
         listByPrice.add(minorPriceLabel);
         listByPrice.add(minorPriceTextField);
@@ -393,8 +444,61 @@ class MainMenu extends javax.swing.JFrame {
         jTabbedPaneContainer.add("CRUD_Vehicles", crudVehicles);
         jTabbedPaneContainer.add("CRUD_Sell", crudSellPanel);
         jTabbedPaneContainer.add("Consult", consultPanel);
-        setVisible(true);
+        mainMenu.setVisible(true);
     }
+
+    private void createVehicle(ActionEvent actionEvent) {
+        Brand brand = new Brand(brandTextField.getText(), brandNationalityTextField.getText());
+        Model model = new Model(modelTextField.getText(), brand);
+        Vehicle vehicle = new Vehicle(model, Integer.parseInt(manuYearTextField.getText()), Integer.parseInt(modelYearTextField.getText()), colorTextField.getText(), Integer.parseInt(mileageTextField.getText()), Integer.parseInt(priceTextField.getText()));
+
+        vehiclesController.createVehicle(vehicle);
+        JOptionPane.showMessageDialog(null,"Vehicle_Created!");
+    }
+
+    private void readVehicles(ActionEvent actionEvent) {
+        readVehiclesTextArea.setText("");
+        List<Vehicle> vehicles = vehiclesController.getVehicles();
+        vehicles.forEach(vehicle -> readVehiclesTextArea.append("#"+vehicle.getId() + " --> brandName: " + vehicle.getModel().getBrand()+" | vehicleName: "+vehicle.getModel().getName() + "\n"));
+    }
+
+
+    private void updateVehicle(ActionEvent actionEvent) {
+        List<Vehicle> vehicles = vehiclesController.getVehicles();
+        vehicles.forEach( vehicle -> {
+            if (vehicle.getId() == Integer.parseInt(updateVehicleIdTextField.getText())) {
+                Brand newBrand = new Brand(updateVehicleBrandTextField.getText(), updateVehicleNationalityTextField.getText());
+                Model newModel = new Model(updateVehicleModelTextField.getText(), newBrand);
+                vehicle.setModel(newModel);
+                vehicle.setColor(updateVehicleColorTextField.getText());
+                vehicle.setMileage(Integer.parseInt(updateVehicleMileageTextField.getText()));
+                vehicle.setModelYear(Integer.parseInt(updateVehicleModelYearTextField.getText()));
+                vehicle.setManufactureYear(Integer.parseInt(updateVehicleManuYearTextField.getText()));
+                vehicle.setPrice(Integer.parseInt(updateVehiclePriceTextField.getText()));
+            } else {
+                JOptionPane.showMessageDialog(null, "Vehicle_#" + updateVehicleIdTextField.getText() + "_not_found!");
+            }
+        });
+
+    }
+
+    private void deleteVehicle (ActionEvent actionEvent) {
+        List<Vehicle> vehicles = vehiclesController.getVehicles();
+        vehicles.forEach(vehicle -> {
+            if (vehicle.getId() == Integer.parseInt(deleteVehiclesTextField.getText())) {
+                vehiclesController.removeVehicle(vehicle);
+            } else {
+                JOptionPane.showMessageDialog(null, "Vehicle_#" + updateVehicleIdTextField.getText() + "_not_found!");
+            }
+        });
+    }
+
+    /*TODO implement crudSell.createSell*/
+    /*TODO implement crudSell.readSell*/
+    /*TODO implement crudSell.updateSell*/
+    /*TODO implement crudSell.deleteSell*/
+
+    /*TODO implement consult*/
     public static void main(String[] args) {
         new MainMenu();
     }

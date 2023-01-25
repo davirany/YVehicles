@@ -4,6 +4,8 @@ import com.vehicles.model.*;
 import com.vehicles.controller.AdvertisingController;
 import com.vehicles.controller.VehiclesController;
 import com.vehicles.controller.SellsController;
+import com.vehicles.view.MainMenu;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -15,8 +17,8 @@ public class Main {
     private final AdvertisingController advertisingController = new AdvertisingController();
 
     public static void main(String[] args) {
-        Main main = new Main();
-        main.execute();
+        MainMenu main = new MainMenu();
+        main.initComponents();
     }
 
     private void execute() {

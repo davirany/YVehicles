@@ -7,36 +7,7 @@
     <list default="true" id="70bcc7fd-059b-468c-8107-12bca76dff8c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/controller/VehiclesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/controller/VehiclesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/model/Brand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/model/Brand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/model/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/model/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/CRUDSell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/CRUDSell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/Create.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/Create.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/Delete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/Delete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/Read.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/Read.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDSell/Update.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDUsers/AdvertiserCreate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDUsers/AdvertiserDelete.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDUsers/AdvertiserUpdate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDUsers/BuyerCreate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDUsers/BuyerDelete.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDUsers/BuyerUpdate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDUsers/CRUDUsers.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDUsers/Create.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDUsers/Delete.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDUsers/Update.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/CRUDVehicles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/CRUDVehicles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/Create.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/Create.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/Delete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/Delete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/Read.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/Read.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/CRUDVehicles/Update.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/Consult/Consult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/Consult/Consult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/vehicles/controller/AdvertisingControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vehicles/controller/AdvertisingControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/vehicles/controller/SellsControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vehicles/controller/SellsControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/vehicles/controller/VehiclesControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vehicles/controller/VehiclesControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/vehicles/model/AdvertiserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vehicles/model/AdvertiserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/vehicles/model/BuyerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vehicles/model/BuyerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,12 +81,12 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.com.vehicles.view.MainMenu">
-    <configuration name="CRUDVehicles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.vehicles.view.CRUDVehicles.CRUDVehicles" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.vehicles.Main" />
       <module name="YCarros" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.vehicles.view.CRUDVehicles.*" />
+          <option name="PATTERN" value="com.vehicles.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -125,19 +96,6 @@
     </configuration>
     <configuration name="MainMenu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.vehicles.view.MainMenu" />
-      <module name="YCarros" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.vehicles.view.CRUDVehicles.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="com.vehicles.view.AppTabbed" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.vehicles.view.AppTabbed" />
       <module name="YCarros" />
       <extension name="coverage">
         <pattern>
@@ -197,6 +155,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.com.vehicles.view.MainMenu" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.com.vehicles.view.MainMenu" />
         <item itemvalue="JUnit.SellsControllerTest.removeSell" />
         <item itemvalue="JUnit.SellsControllerTest.createSell" />
@@ -242,7 +201,8 @@
       <workItem from="1674088137870" duration="599000" />
       <workItem from="1674163792778" duration="1625000" />
       <workItem from="1674247288498" duration="7523000" />
-      <workItem from="1674282977193" duration="14978000" />
+      <workItem from="1674282977193" duration="16913000" />
+      <workItem from="1674501671739" duration="21884000" />
     </task>
     <servers />
   </component>
