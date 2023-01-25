@@ -1,9 +1,7 @@
 package com.vehicles.view;
 
 import com.vehicles.controller.*;
-import com.vehicles.model.Brand;
-import com.vehicles.model.Model;
-import com.vehicles.model.Vehicle;
+import com.vehicles.model.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -51,7 +49,7 @@ public class MainMenu {
 
     //ReadVehicles ->
     JPanel readVehiclesPanel = new JPanel();
-    JTextArea readVehiclesTextArea = new JTextArea(10,30);
+    JTextArea readVehiclesTextArea = new JTextArea(10,40);
     JButton listAllVehicles = new JButton("List_All_Vehicles");
     JScrollPane readVehiclesScrollPane = new JScrollPane(readVehiclesTextArea,JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 
@@ -136,8 +134,8 @@ public class MainMenu {
 
     //ReadSell ->
     JPanel readSellsInnerWindow = new JPanel();
-    JTextArea textArea = new JTextArea();
-    JButton listSells = new JButton("List_All_Sells");
+    JTextArea readSellsTextArea = new JTextArea(10,40);
+    JButton readSells = new JButton("Read_Sells");
 
     JPanel readSellsPanel = new JPanel();
     //End Of ReadSell
@@ -345,15 +343,17 @@ public class MainMenu {
         createSellPanel.add(createBuyerPanel);
         createSellPanel.add(createVehiclePanel);
         createSellPanel.add(createSellButtonPanel);
+        createSell.addActionListener(this::createSell);
         //End Of Create Sell
 
         //Read Vehicles ->
-        textArea.setFont(new Font("Serif", Font.ITALIC,16));
-        readSellsPanel.add(listSells);
+        readSellsTextArea.setFont(new Font("Serif", Font.ITALIC,16));
+        readSellsPanel.add(readSells);
         readSellsInnerWindow.add(new JScrollBar());
         readSellsPanel.add(readSellsInnerWindow);
-        textArea.setSize(300,300);
-        readSellsInnerWindow.add(textArea);
+        readSellsTextArea.setSize(300,300);
+        readSellsInnerWindow.add(readSellsTextArea);
+        readSells.addActionListener(this::readSells);
         //End Of Read Vehicles
 
         //Update Sell ->
@@ -397,6 +397,7 @@ public class MainMenu {
 
         //Update Sell Button ->
         updateSellButtonPanel.add(updateSell);
+        updateSell.addActionListener(this::updateSell);
         //End Of Update Sell Button
 
         updateSellPanel.add(updateAdvertiserPanel);
@@ -410,6 +411,7 @@ public class MainMenu {
         deleteSellPanel.add(deleteSellIdSell);
         deleteSellPanel.add(deleteSellTextField);
         deleteSellPanel.add(deleteSellButton);
+        deleteSellButton.addActionListener(this::deleteSell);
         //End Of Delete Sell
 
 
@@ -475,8 +477,7 @@ public class MainMenu {
                 vehicle.setModelYear(Integer.parseInt(updateVehicleModelYearTextField.getText()));
                 vehicle.setManufactureYear(Integer.parseInt(updateVehicleManuYearTextField.getText()));
                 vehicle.setPrice(Integer.parseInt(updateVehiclePriceTextField.getText()));
-            } else {
-                JOptionPane.showMessageDialog(null, "Vehicle_#" + updateVehicleIdTextField.getText() + "_not_found!");
+                JOptionPane.showMessageDialog(null,"Vehicle_Updated!");
             }
         });
 
@@ -492,11 +493,64 @@ public class MainMenu {
             }
         });
     }
+    private void createSell(ActionEvent actionEvent) {
+        List<Vehicle> vehicles = vehiclesController.getVehicles();
+        vehicles.forEach(vehicle -> {
+            if (vehicle.getId() == Integer.parseInt(createSellVehicleIdTextField.getText())) {
+                Advertiser advertiser = new Advertiser(createAdvertiserNameTextField.getText(), createAdvertiserPhoneTextField.getText(), createAdvertiserEmailTextField.getName(), Integer.parseInt(createAdvertiserActiveAdsTextField.getText()), Integer.parseInt(createAdvertiserVehiclesSoldTextField.getText()));
+                Advertising advertising = new Advertising("This is the advertising of the car #" + vehicle.getId(), advertiser, vehicle);
+                Buyer buyer = new Buyer(createBuyerNameTextField.getText(),createBuyerPhoneTextField.getText(), createBuyerEmailTextField.getText(), Integer.parseInt(createBuyerVehiclesBoughtTextField.getText()));
+                Sell sell = new Sell(advertising, buyer);
+                sellsController.createSell(sell);
+                JOptionPane.showMessageDialog(null, "Sell_Created!");
+            }
+        });
+    }
+    private void readSells (ActionEvent actionEvent){
+        readSellsTextArea.setText("");
+        List<Sell> sells = sellsController.getSells();
+        sells.forEach(sell -> {
+            readSellsTextArea.append("#" + sell.getId() + " --> vehicleId: " + sell.getAdvertising().getVehicle().getId() + " | advertiserName: " + sell.getAdvertising().getAdvertiser().getName() + " | buyerName: " + sell.getBuyer().getName() + " | dateOfTheSell: " + sell.getDate() + "\n");
+        });
+    }
+    private void updateSell(ActionEvent actionEvent) {
+    List<Sell> sells = sellsController.getSells();
+    sells.forEach(sell -> {
+        if (sell.getAdvertising().getVehicle().getId() == Integer.parseInt(updateSellVehicleIdTextField.getText())) {
+            Advertising updatedAdvertising = sell.getAdvertising();
+            Advertiser updatedAdvertiser = sell.getAdvertising().getAdvertiser();
+            updatedAdvertiser.setAmountActiveAds(Integer.parseInt(updateAdvertiserActiveAdsTextField.getText()));
+            updatedAdvertiser.setAmountVehiclesSold(Integer.parseInt(updateAdvertiserVehiclesSoldTextField.getText()));
+            updatedAdvertiser.setName(updateAdvertiserNameTextField.getText());
+            updatedAdvertiser.setEmail(updateAdvertiserEmailTextField.getText());
+            updatedAdvertiser.setPhone(updateAdvertiserPhoneTextField.getText());
 
-    /*TODO implement crudSell.createSell*/
-    /*TODO implement crudSell.readSell*/
-    /*TODO implement crudSell.updateSell*/
-    /*TODO implement crudSell.deleteSell*/
+            updatedAdvertising.setAdvertiser(updatedAdvertiser);
+            sell.setAdvertising(updatedAdvertising);
+
+            Buyer updatedBuyer = sell.getBuyer();
+
+            updatedBuyer.setAmountBoughtVehicles(Integer.parseInt(updateBuyerVehiclesBoughtTextField.getText()));
+            updatedBuyer.setEmail(updateBuyerEmailTextField.getText());
+            updatedBuyer.setName(updateBuyerNameTextField.getText());
+            updatedBuyer.setPhone(updateBuyerPhoneTextField.getText());
+
+            sell.setBuyer(updatedBuyer);
+
+            sell.setDate(updateSellDateTextField.getText());
+            JOptionPane.showMessageDialog(null,"Sell_Updated!");
+        }
+    });
+    }
+    private void deleteSell(ActionEvent actionEvent) {
+        List<Sell> sells = sellsController.getSells();
+        sells.forEach(sell -> {
+            if (sell.getId() == Integer.parseInt(deleteSellTextField.getText())) {
+            sellsController.removeSell(sell);
+            }
+        });
+        JOptionPane.showMessageDialog(null,"Sell_Deleted!");
+    }
 
     /*TODO implement consult*/
     public static void main(String[] args) {

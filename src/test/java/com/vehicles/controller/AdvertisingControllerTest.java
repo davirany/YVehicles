@@ -13,7 +13,7 @@ class AdvertisingControllerTest {
         Brand brand = new Brand("Chevrolet", "American");
         Model model = new Model("Camaro", brand);
         Vehicle vehicle = new Vehicle(model, 2022, 2023, "Yellow", 0, 550000, 1);
-        Advertising advertising = new Advertising(1, "description", advertiser, vehicle);
+        Advertising advertising = new Advertising("description", advertiser, vehicle);
         advertisingController.createAdvertising(advertising);
         assertTrue(advertisingController.getAdvertisements().contains(advertising));
     }
@@ -24,7 +24,7 @@ class AdvertisingControllerTest {
         Brand brand = new Brand("Chevrolet", "American");
         Model model = new Model("Camaro", brand);
         Vehicle vehicle = new Vehicle(model, 2022, 2023, "Yellow", 0, 550000, 1);
-        Advertising advertising = new Advertising(1, "description", advertiser, vehicle);
+        Advertising advertising = new Advertising("description", advertiser, vehicle);
         advertisingController.createAdvertising(advertising);
         advertisingController.removeAdvertising(advertising);
         assertFalse(advertisingController.getAdvertisements().contains(advertising));

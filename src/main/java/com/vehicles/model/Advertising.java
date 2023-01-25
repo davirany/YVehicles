@@ -6,7 +6,7 @@ public class Advertising {
     private Advertiser advertiser;
     private Vehicle vehicle;
 
-    public Advertising(int id, String description, Advertiser advertiser, Vehicle vehicle) {
+    public Advertising(String description, Advertiser advertiser, Vehicle vehicle) {
         this.id = id;
         this.description = description;
         this.advertiser = advertiser;

@@ -27,19 +27,19 @@ public class Main {
 
         Vehicle vehicle = addVehicle("Chevrolet", "Camaro", "Yellow", 0, 80000, 2022, 2023);
         vehiclesController.createVehicle(vehicle);
-        Advertising advertising1 = new Advertising(1, "Advertising of car 1", advertiser1, vehicle);
+        Advertising advertising1 = new Advertising("Advertising of car 1", advertiser1, vehicle);
         addAdvertising(advertising1);
         advertisingController.createAdvertising(advertising1);
 
         Vehicle vehicle2 = addVehicle("Volkswagen", "Golf", "White", 100000, 52000, 2020, 2021);
         vehiclesController.createVehicle(vehicle2);
-        Advertising advertising2 = new Advertising(2, "Advertising of car 2", advertiser1, vehicle2);
+        Advertising advertising2 = new Advertising("Advertising of car 2", advertiser1, vehicle2);
         addAdvertising(advertising2);
         advertisingController.createAdvertising(advertising2);
 
         Vehicle vehicle3 = addVehicle("Ford", "Ka", "Black", 0, 65000, 2019, 2019);
         vehiclesController.createVehicle(vehicle3);
-        Advertising advertising3 = new Advertising(3, "Advertising of car 3", advertiser1, vehicle3);
+        Advertising advertising3 = new Advertising("Advertising of car 3", advertiser1, vehicle3);
         addAdvertising(advertising3);
         advertisingController.createAdvertising(advertising3);
 
@@ -144,6 +144,6 @@ public class Main {
         int bought = buyer.getAmountBoughtVehicles();
         buyer.setAmountBoughtVehicles(bought+1);
         advertising.getAdvertiser().setAmountVehiclesSold(buyer.getAmountBoughtVehicles()+1);
-        return new Sell(advertising, sellDate, buyer, randomSellId);
+        return new Sell(advertising, buyer);
     }
 }

@@ -15,6 +15,9 @@ public class SellsController {
     }
 
     public void createSell(Sell sell) {
+        int randomId = (int)(Math.random()*(1500-500+1)+500);
+        sell.setId(randomId);
+
         sell.getBuyer().setAmountBoughtVehicles(sell.getBuyer().getAmountBoughtVehicles() + 1);
 
         sell.getAdvertising().getAdvertiser().setAmountActiveAds(sell.getAdvertising().getAdvertiser().getAmountActiveAds() - 1);

@@ -6,7 +6,7 @@ public class Sell {
     private Buyer buyer;
     private int id;
 
-    public Sell(Advertising advertising, String date, Buyer buyer, int id) {
+    public Sell(Advertising advertising, Buyer buyer) {
         this.advertising = advertising;
         this.date = date;
         this.buyer = buyer;

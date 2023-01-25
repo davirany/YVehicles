@@ -15,9 +15,9 @@ class SellsControllerTest {
         Brand brand = new Brand("Chevrolet", "American");
         Model model = new Model("Camaro", brand);
         Vehicle vehicle = new Vehicle(model, 2022, 2023, "Yellow", 0, 550000, 1);
-        Advertising advertising = new Advertising(1, "description", advertiser, vehicle);
+        Advertising advertising = new Advertising("description", advertiser, vehicle);
         Buyer buyer = new Buyer("buyerName", "61912345678", "email@email.com", 0);
-        Sell sell = new Sell(advertising, "01/01/2001", buyer, 1);
+        Sell sell = new Sell(advertising, buyer);
         sellsController.createSell(sell);
 
         assertTrue(sellsController.getSells().contains(sell));
@@ -32,9 +32,9 @@ class SellsControllerTest {
         Brand brand = new Brand("Chevrolet", "American");
         Model model = new Model("Camaro", brand);
         Vehicle vehicle = new Vehicle(model, 2022, 2023, "Yellow", 0, 550000, 1);
-        Advertising advertising = new Advertising(1, "description", advertiser, vehicle);
+        Advertising advertising = new Advertising("description", advertiser, vehicle);
         Buyer buyer = new Buyer("buyerName", "61912345678", "email@email.com", 0);
-        Sell sell = new Sell(advertising, "01/01/2001", buyer, 1);
+        Sell sell = new Sell(advertising, buyer);
         sellsController.createSell(sell);
         sellsController.removeSell(sell);
 
