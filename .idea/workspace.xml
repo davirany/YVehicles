@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70bcc7fd-059b-468c-8107-12bca76dff8c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/controller/SellsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/controller/SellsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/controller/VehiclesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/controller/VehiclesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/model/Advertiser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/model/Advertiser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/model/Advertising.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/model/Advertising.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/model/Buyer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/model/Buyer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vehicles/view/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vehicles/view/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/vehicles/controller/SellsControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vehicles/controller/SellsControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagram/model.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagram/model.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,30 +41,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;359&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/davir/IdeaProjects/YCarros/src/main/java/com/veiculos&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/davir/IdeaProjects/YCarros/src/main/java/com/veiculos/diagrama&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.intentionPowerPack&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "359",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "full.screen.before.presentation.mode": "false",
+    "last_directory_selection": "C:/Users/davir/IdeaProjects/YCarros/src/main/java/com/veiculos",
+    "last_opened_file_path": "C:/Users/davir/IdeaProjects/YCarros/diagram",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.intentionPowerPack"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.veiculos.dominio" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\davir\IdeaProjects\YCarros\diagram" />
       <recent name="C:\Users\davir\IdeaProjects\YCarros\src\main\java\com\veiculos\diagrama" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -210,7 +204,7 @@
       <workItem from="1674247288498" duration="7523000" />
       <workItem from="1674282977193" duration="16913000" />
       <workItem from="1674501671739" duration="38014000" />
-      <workItem from="1674688041202" duration="11967000" />
+      <workItem from="1674688041202" duration="15538000" />
     </task>
     <servers />
   </component>
