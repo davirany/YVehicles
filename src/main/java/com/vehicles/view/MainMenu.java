@@ -9,8 +9,8 @@ import java.awt.event.ActionEvent;
 import java.util.List;
 
 public class MainMenu {
-    VehiclesController vehiclesController = new VehiclesController();
-    SellsController sellsController = new SellsController();
+    public VehiclesController vehiclesController = new VehiclesController();
+    public SellsController sellsController = new SellsController();
 
     //MainMenu ->
     JFrame mainMenu = new JFrame("Y_Vehicles");
@@ -50,7 +50,6 @@ public class MainMenu {
     JPanel readVehiclesPanel = new JPanel();
     JTextArea readVehiclesTextArea = new JTextArea(10,40);
     JButton listAllVehicles = new JButton("List_All_Vehicles");
-    JScrollPane readVehiclesScrollPane = new JScrollPane(readVehiclesTextArea,JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 
     JPanel readVehicles = new JPanel();
     //End Of ReadVehicles
@@ -254,7 +253,6 @@ public class MainMenu {
         //ReadVehicles ->
         readVehiclesTextArea.setFont(new Font("Serif", Font.ITALIC,16));
         readVehicles.add(listAllVehicles);
-        readVehicles.add(readVehiclesScrollPane);
         readVehicles.add(readVehiclesPanel);
         readVehiclesTextArea.setBounds(0,0,300,300);
         readVehiclesPanel.add(readVehiclesTextArea);
@@ -348,7 +346,6 @@ public class MainMenu {
         //Read Vehicles ->
         readSellsTextArea.setFont(new Font("Serif", Font.ITALIC,16));
         readSellsPanel.add(readSells);
-        readSellsInnerWindow.add(new JScrollBar());
         readSellsPanel.add(readSellsInnerWindow);
         readSellsTextArea.setSize(300,300);
         readSellsInnerWindow.add(readSellsTextArea);
@@ -448,23 +445,44 @@ public class MainMenu {
         mainMenu.setVisible(true);
     }
 
-    private void createVehicle(ActionEvent actionEvent) {
+    /**
+     * This method performs the createVehicle() from vehicles controller in the view at the press of the button
+     * @param actionEvent click of the button
+     * @author Davi Ranieri Fonseca
+     */
+    protected void createVehicle(ActionEvent actionEvent) {
         Brand brand = new Brand(brandTextField.getText(), brandNationalityTextField.getText());
         Model model = new Model(modelTextField.getText(), brand);
         Vehicle vehicle = new Vehicle(model, Integer.parseInt(manuYearTextField.getText()), Integer.parseInt(modelYearTextField.getText()), colorTextField.getText(), Integer.parseInt(mileageTextField.getText()), Integer.parseInt(priceTextField.getText()));
-
         vehiclesController.createVehicle(vehicle);
         JOptionPane.showMessageDialog(null,"Vehicle_Created!");
+        brandTextField.setText("");
+        brandNationalityTextField.setText("");
+        modelTextField.setText("");
+        manuYearTextField.setText("");
+        modelYearTextField.setText("");
+        colorTextField.setText("");
+        mileageTextField.setText("");
+        priceTextField.setText("");
     }
 
-    private void readVehicles(ActionEvent actionEvent) {
+    /**
+     * This method prints into the respective textArea all the vehicles that were created at the press of the button
+     * @param actionEvent click of the button
+     * @author Davi Ranieri Fonseca
+     */
+    protected void readVehicles(ActionEvent actionEvent) {
         readVehiclesTextArea.setText("");
         List<Vehicle> vehicles = VehiclesController.getVehicles();
         vehicles.forEach(vehicle -> readVehiclesTextArea.append("#"+vehicle.getId() + " --> brandName: " + vehicle.getModel().getBrand()+" | vehicleName: "+vehicle.getModel().getName() + "\n"));
     }
 
-
-    private void updateVehicle(ActionEvent actionEvent) {
+    /**
+     * This method performs an update of a vehicle whose ID was given in the textField, updating all of it`s attributes with the information that are present in the attributes textFields at the press of the button
+     * @param actionEvent click of the button
+     * @author Davi Ranieri Fonseca
+     */
+    protected void updateVehicle(ActionEvent actionEvent) {
         List<Vehicle> vehicles = VehiclesController.getVehicles();
         vehicles.forEach( vehicle -> {
             if (vehicle.getId() == Integer.parseInt(updateVehicleIdTextField.getText())) {
@@ -482,35 +500,68 @@ public class MainMenu {
 
     }
 
-    private void deleteVehicle (ActionEvent actionEvent) {
+    /**
+     * This method performs the removeVehicle() from the vehiclesController whose ID was given in the respective textField at the press of the button
+     * @param actionEvent click of the button
+     * @author Davi Ranieri Fonseca
+     */
+    protected void deleteVehicle (ActionEvent actionEvent) {
         List<Vehicle> vehicles = VehiclesController.getVehicles();
         vehicles.forEach(vehicle -> {
             if (vehicle.getId() == Integer.parseInt(deleteVehiclesTextField.getText())) {
                 vehiclesController.removeVehicle(vehicle);
-            } else {
-                JOptionPane.showMessageDialog(null, "Vehicle_#" + updateVehicleIdTextField.getText() + "_not_found!");
             }
+            JOptionPane.showMessageDialog(null,"Vehicle_Deleted");
         });
     }
-    private void createSell(ActionEvent actionEvent) {
+
+    /**
+     * This method performs the createSell() from sellsController in the view at the press of the button
+     * @param actionEvent click of the button
+     * @author Davi Ranieri Fonseca
+     */
+    protected void createSell(ActionEvent actionEvent) {
         List<Vehicle> vehicles = VehiclesController.getVehicles();
         vehicles.forEach(vehicle -> {
             if (vehicle.getId() == Integer.parseInt(createSellVehicleIdTextField.getText())) {
                 Advertiser advertiser = new Advertiser(createAdvertiserNameTextField.getText(), createAdvertiserPhoneTextField.getText(), createAdvertiserEmailTextField.getName(), Integer.parseInt(createAdvertiserActiveAdsTextField.getText()), Integer.parseInt(createAdvertiserVehiclesSoldTextField.getText()));
-                Advertising advertising = new Advertising("This is the advertising of the car #" + vehicle.getId(), advertiser, vehicle);
+                Advertising advertising = new Advertising(advertiser, vehicle);
                 Buyer buyer = new Buyer(createBuyerNameTextField.getText(),createBuyerPhoneTextField.getText(), createBuyerEmailTextField.getText(), Integer.parseInt(createBuyerVehiclesBoughtTextField.getText()));
                 Sell sell = new Sell(advertising, buyer);
                 sellsController.createSell(sell);
+                vehiclesController.removeVehicle(vehicle);
                 JOptionPane.showMessageDialog(null, "Sell_Created!");
+                createSellVehicleIdTextField.setText("");
+                createAdvertiserNameTextField.setText("");
+                createAdvertiserPhoneTextField.setText("");
+                createAdvertiserEmailTextField.setText("");
+                createAdvertiserActiveAdsTextField.setText("");
+                createAdvertiserVehiclesSoldTextField.setText("");
+                createBuyerNameTextField.setText("");
+                createBuyerPhoneTextField.setText("");
+                createBuyerEmailTextField.setText("");
+                createBuyerVehiclesBoughtTextField.setText("");
             }
         });
     }
-    private void readSells (ActionEvent actionEvent){
+
+    /**
+     * This method prints into the respective textArea all the sells that were created at the press of the button
+     * @param actionEvent click of the button
+     * @author Davi Ranieri Fonseca
+     */
+    protected void readSells (ActionEvent actionEvent){
         readSellsTextArea.setText("");
         List<Sell> sells = SellsController.getSells();
-        sells.forEach(sell -> readSellsTextArea.append("#" + sell.getId() + " --> vehicleId: " + sell.getAdvertising().getVehicle().getId() + " | advertiserName: " + sell.getAdvertising().getAdvertiser().getName() + " | buyerName: " + sell.getBuyer().getName() + " | dateOfTheSell: " + sell.getDate() + "\n"));
+        sells.forEach(sell -> readSellsTextArea.append("#" + sell.getId() + " --> vehicleId: " + sell.getAdvertising().getVehicle().getId() + " | advertiserName: " + sell.getAdvertising().getAdvertiser().getName() + " | buyerName: " + sell.getBuyer().getName() + "\n\t" + " | dateOfTheSell: " + sell.getDate() + "\n"));
     }
-    private void updateSell(ActionEvent actionEvent) {
+
+    /**
+     * This method performs an update of a sell whose ID was given in the textField, updating all of it`s attributes with the information that are present in the attributes textFields at the press of the button
+     * @param actionEvent click of the button
+     * @author Davi Ranieri Fonseca
+     */
+    protected void updateSell(ActionEvent actionEvent) {
     List<Sell> sells = SellsController.getSells();
     sells.forEach(sell -> {
         if (sell.getAdvertising().getVehicle().getId() == Integer.parseInt(updateSellVehicleIdTextField.getText())) {
@@ -539,23 +590,39 @@ public class MainMenu {
         }
     });
     }
-    private void deleteSell(ActionEvent actionEvent) {
+
+    /**
+     * This method performs the removeSell() from the sellsController whose ID was given in the respective textField at the press of the button
+     * @param actionEvent click of the button
+     * @author Davi Ranieri Fonseca
+     */
+    protected void deleteSell(ActionEvent actionEvent) {
         List<Sell> sells = SellsController.getSells();
         sells.forEach(sell -> {
             if (sell.getId() == Integer.parseInt(deleteSellTextField.getText())) {
             sellsController.removeSell(sell);
+            JOptionPane.showMessageDialog(null,"Sell_Deleted!");
             }
         });
-        JOptionPane.showMessageDialog(null,"Sell_Deleted!");
     }
 
-    private void listByPrice(ActionEvent actionEvent) {
+    /**
+     * This method performs the listByPrice() from vehiclesController and prints out the List generated in the respective textArea
+     * @param actionEvent click of the button
+     * @author Davi Ranieri Fonseca
+     */
+    protected void listByPrice(ActionEvent actionEvent) {
         consultTextArea.setText("________________________List_By_Price________________________\n");
         List<Vehicle> listedByPrice = vehiclesController.listByPrice(Integer.parseInt(minorPriceTextField.getText()), Integer.parseInt(majorPriceTextField.getText()));
         listedByPrice.forEach(vehicle -> consultTextArea.append("#"+vehicle.getId() + " --> brandName: " + vehicle.getModel().getBrand()+" | vehicleName: "+vehicle.getModel().getName() + "\n"));
     }
 
-    private void listByBrand(ActionEvent actionEvent) {
+    /**
+     * This method performs the listByBrand() from vehiclesController and prints out the List generated in the respective textArea
+     * @param actionEvent click of the button
+     * @author Davi Ranieri Fonseca
+     */
+    protected void listByBrand(ActionEvent actionEvent) {
         consultTextArea.setText("________________________List_By_Brand________________________\n");
         List<Vehicle> listedByBrand = vehiclesController.listByBrand(consultBrandTextField.getText());
         listedByBrand.forEach(vehicle -> consultTextArea.append("#"+vehicle.getId() + " --> brandName: " + vehicle.getModel().getBrand()+" | vehicleName: "+vehicle.getModel().getName() + "\n"));
