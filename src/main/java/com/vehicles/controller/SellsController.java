@@ -19,6 +19,11 @@ public class SellsController {
     }
 
     /**
+     * This is an empty constructor
+     */
+    public SellsController() {}
+
+    /**
      * This method is responsible for create a new sell and adds to the sells List
      * @param sell The desired sell that you want to add in the sells List
      * @author Davi Ranieri Fonseca

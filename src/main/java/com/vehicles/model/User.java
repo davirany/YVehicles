@@ -5,6 +5,12 @@ public abstract class User {
     private String phone;
     private String email;
 
+    /**
+     * This constructor is used as parent by the Buyer and Advertiser classes
+     * @param name Name of the User
+     * @param phone Phone number of the User
+     * @param email Email of the User
+     */
     public User(String name, String phone, String email) {
         this.name = name;
         this.phone = phone;

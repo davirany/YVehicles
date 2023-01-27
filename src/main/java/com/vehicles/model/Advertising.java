@@ -6,6 +6,11 @@ public class Advertising {
     private Advertiser advertiser;
     private Vehicle vehicle;
 
+    /**
+     * This constructor is responsible for creating a new Advertising without th ID and Description parameters because this two are handled by other methods
+     * @param advertiser Advertiser object responsible for this Advertising
+     * @param vehicle Vehicle object of the Advertising
+     */
     public Advertising(Advertiser advertiser, Vehicle vehicle) {
         this.advertiser = advertiser;
         this.vehicle = vehicle;

@@ -11,6 +11,14 @@ public class Advertiser extends User {
      */
     private List<Vehicle> advertisedVehicles = new ArrayList<>();
 
+    /**
+     * This constructor is used to create a new Advertiser, but with no List of advertisedVehicles, because the method addAdvertisedCar() will handle this list.
+     * @param name Name of the Advertiser
+     * @param phone Phone number of the Advertiser
+     * @param email Email of the Advertiser
+     * @param amountActiveAds Amount of active Advertisements of the Advertiser
+     * @param amountVehiclesSold Amount of sold vehicles by this Advertiser
+     */
     public Advertiser(String name, String phone, String email, int amountActiveAds, int amountVehiclesSold) {
         super(name, phone, email);
         this.amountActiveAds = amountActiveAds;

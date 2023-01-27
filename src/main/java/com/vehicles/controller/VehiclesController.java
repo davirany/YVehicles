@@ -17,6 +17,11 @@ public class VehiclesController {
     }
 
     /**
+     * This is an empty constructor
+     */
+    public VehiclesController() {}
+
+    /**
      * This method is responsible for creating an id for the vehicle and adding the desired vehicle in the vehicles List
      * @param vehicle The vehicles that you want to add in the vehicles List
      * @author Davi Ranieri Fonseca

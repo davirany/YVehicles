@@ -9,6 +9,16 @@ public class Vehicle {
     private int price;
     private int id;
 
+    /**
+     * This constructor is responsible for create a new Vehicle
+     * @param model Model object of the Vehicle
+     * @param manufactureYear Year of manufacture of the Vehicle
+     * @param modelYear Year of the model of the Vehicle
+     * @param color Color name of the Vehicle
+     * @param mileage Mileage of the Vehicle
+     * @param price Price of the Vehicle
+     * @param id ID of the Vehicle
+     */
     public Vehicle(Model model, int manufactureYear, int modelYear, String color, int mileage, int price, int id) {
         this.model = model;
         this.manufactureYear = manufactureYear;
@@ -19,6 +29,15 @@ public class Vehicle {
         this.id = id;
     }
 
+    /**
+     * This constructor is responsible for create a new Vehicle without the ID parameter, because is handled by the VehiclesController
+     * @param model Model object of the Vehicle
+     * @param manufactureYear Year of manufacture of the Vehicle
+     * @param modelYear Year of the model of the Vehicle
+     * @param color Color name of the Vehicle
+     * @param mileage Mileage of the Vehicle
+     * @param price Price of the Vehicle
+     */
     public Vehicle(Model model, int manufactureYear, int modelYear, String color, int mileage, int price) {
         this.model = model;
         this.manufactureYear = manufactureYear;
